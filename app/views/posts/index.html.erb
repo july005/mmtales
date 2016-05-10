@@ -1,32 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Posts</h1>
+<h1>Index View</h1>
 
-<div class="froala-view">
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Subtitle</th>
-        <th>Body</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+      <div id="greetings">
+        Hello universe! hahahaha hahahah 
+      </div>
+  
 
-    <tbody>
+ 
       <% @posts.each do |post| %>
-        <tr>
-          <td><%= post.title %></td>
-          <td><%= post.subtitle %></td>
-          <td><%= post.body.html_safe %></td>
-          <td><%= link_to 'Show', post %></td>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+        <hr><hr><hr>
+          <h2><%= post.title %></h2>
+          <h3><%= post.subtitle %></h3>
+          <div class="froala-view"><%= post.body.html_safe %></div>
+          <%= link_to 'Show', post %>
+          <%= link_to 'Edit', edit_post_path(post) %>
+          <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
       <% end %>
-    </tbody>
-  </table>
-</div>
+
+
+
+
 <br>
 
 <%= link_to 'New Post', new_post_path %>

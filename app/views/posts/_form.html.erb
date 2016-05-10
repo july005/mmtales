@@ -34,8 +34,37 @@
 
  $('#wysiwyg').froalaEditor({
     inlineMode: false,
-    heightMin: '200px'
+    heightMin: '200px',
+    imageUploadToS3: {
+      bucket: '<%= @hash[:bucket] %>',
+      region: 's3', // Change the region if it is different
+      keyStart: '<%= @hash[:key_start] %>',
+      callback: function (url, key) {
+        console.log (url);
+        console.log (key);
+      },
+      params: {
+        acl: '<%= @hash[:acl] %>',
+        AWSAccessKeyId: '<%= @hash[:access_key] %>',
+        policy: '<%= @hash[:policy] %>',
+        signature: '<%= @hash[:signature] %>',
+      }
+    },
+    fileUploadToS3: {
+      bucket: '<%= @hash[:bucket] %>',
+      region: 's3', // Change the region if it is different
+      keyStart: '<%= @hash[:key_start] %>',
+      callback: function (url, key) {
+        console.log (url);
+        console.log (key);
+      },
+      params: {
+        acl: '<%= @hash[:acl] %>',
+        AWSAccessKeyId: '<%= @hash[:access_key] %>',
+        policy: '<%= @hash[:policy] %>',
+        signature: '<%= @hash[:signature] %>',
+      }
+    }
  })
 </script>
-
 

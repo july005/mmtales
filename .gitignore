@@ -15,3 +15,7 @@ config/initializers/env.rb
 # Ignore application configuration
 config/application.yml
 config/secrets.yml
+config/.env
+
+# Ignore application configuration
+/config/application.yml
