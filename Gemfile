@@ -14,6 +14,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'wysiwyg-rails'
 gem 'sanitize'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'puma'
+gem 'puma-heroku', '~> 1.0'
+
 
   group :development, :test do
     gem 'better_errors'
@@ -38,6 +41,9 @@ group :development do
   gem 'web-console', '~> 2.0'
 end
 
-gem 'rails_12factor', group: :production
+group :production do
+  
+  gem 'rails_12factor'
+end
 
 ruby "2.3.0"
