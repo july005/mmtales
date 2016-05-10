@@ -1,26 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Index View</h1>
-
-      <div id="greetings">
-        Hello universe! hahahaha hahahah 
-      </div>
-  
+<h1>********Index View********</h1><br><br><br><br>
 
  
-      <% @posts.each do |post| %>
-        <hr><hr><hr>
+      <div id="greetings" class="froala-view">
+        
+        <% @posts.each do |post| %>
+          
+          <hr><hr><hr>
           <h2><%= post.title %></h2>
           <h3><%= post.subtitle %></h3>
-          <div class="froala-view"><%= post.body.html_safe %></div>
+          <div class="block-with-text"><%= post.body.html_safe %></div>
           <%= link_to 'Show', post %>
           <%= link_to 'Edit', edit_post_path(post) %>
           <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+          
       <% end %>
-
+        
+      </div>
 
 
 
 <br>
 
 <%= link_to 'New Post', new_post_path %>
+
+
+  
