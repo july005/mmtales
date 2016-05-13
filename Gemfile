@@ -16,6 +16,7 @@ gem 'sanitize'
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'puma'
 gem 'puma-heroku', '~> 1.0'
+gem 'devise'
 
 
   group :development, :test do

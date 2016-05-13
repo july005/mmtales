@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   include AmazonSignature
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -11,7 +12,7 @@ class PostsController < ApplicationController
 
   def new
     @hash = AmazonSignature::data_hash
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   def edit
@@ -20,7 +21,7 @@ class PostsController < ApplicationController
 
   def create
     @hash = AmazonSignature::data_hash
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
 
     respond_to do |format|
       if @post.save
