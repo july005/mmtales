@@ -17,6 +17,7 @@ gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'puma'
 gem 'puma-heroku', '~> 1.0'
 gem 'devise'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 
 
   group :development, :test do

@@ -8,7 +8,7 @@
   /* use this value to count block height */
   line-height: 2em;
   /* max-height = line-height (1.2) * lines max number (3) */
-  max-height: 30em; 
+  max-height: 29em; 
   /* fix problem when last visible word doesn't adjoin right side  */
   text-align: justify;  
   /* place for '...' */
@@ -43,3 +43,19 @@
   /* bg color = bg color under block */
   background: white;
 }
+
+h1 {
+  text-align: center;
+  color: #76c4ae;
+}
+
+.float_center {
+  float: right;
+  position: relative;
+  left: -50%; /* or right 50% */
+  text-align: left;
+}
+
+
+
+

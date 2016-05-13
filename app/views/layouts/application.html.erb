@@ -15,12 +15,12 @@
 
 <%= yield %>
 
-<% if user_signed_in? %>
+<h1><% if user_signed_in? %>
 	<%= link_to "New Post", new_post_path  %>
 	<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
 <% else %>
 	<%= link_to "Sign In", new_user_session_path  %>
-<% end %>
+<% end %></h1>
 
 </body>
 </html>
