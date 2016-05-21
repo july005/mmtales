@@ -1,8 +1,7 @@
-<%= form_for(@post) do |f| %>
+<%= form_for [@post], html: { multipart: true } do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
       <ul>
       <% @post.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,23 +11,24 @@
   <% end %>
 
   <div class="field">
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
-
   <div class="field">
     <%= f.label :subtitle %><br>
     <%= f.text_field :subtitle %>
   </div>
-
-</br>
-
+  </br>
     <%= f.label :body %>
-    <%= f.text_area :body, id: "wysiwyg" %>
-    
+    <%= f.text_area :body, id: "wysiwyg" %> 
   <div class="actions">
     <%= f.submit %>
-  </div><% end %>
+  </div>
+
+<% end %>
 
 <script>
 

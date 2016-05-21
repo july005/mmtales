@@ -7,10 +7,11 @@
         
         <% @posts.each do |post| %>
           
-          <hr><hr><hr>
+          <hr><hr>
+          <%= image_tag post.image.url(:large), :class => "img-responsive, center-block" %>
           <h2><%= post.title %></h2>
           <h3><%= post.subtitle %></h3>
-          <div class="block-with-text"><%= post.body.html_safe %></div>
+          <!--<div class="block-with-text">    < # %= post.body.html_safe %></div>-->
           
           <%= link_to 'Show', post %>
           

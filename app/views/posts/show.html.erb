@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
 
-<p>
-  <strong>Subtitle:</strong>
+<%= image_tag @post.image.url(:medium), :class => "img-responsive, center-block" %>
+
+<h1>
+  <%= @post.title %>
+</h1>
+
+<h2>
   <%= @post.subtitle %>
-</p>
+</h2>
 
 <div class="froala-view">
   <%= @post.body.html_safe %>
