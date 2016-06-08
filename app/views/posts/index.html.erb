@@ -5,22 +5,23 @@
     <div class="jumbotron">
       <div id="greetings" class="froala-view" class="float-center">
         
-        <% @posts.each do |post| %>
-          
-          <hr><hr>
-          <%= image_tag post.image.url(:large), :class => "img-responsive, center-block" %>
-          <h2><%= post.title %></h2>
-          <h3><%= post.subtitle %></h3>
-          <!--<div class="block-with-text">    < # %= post.body.html_safe %></div>-->
-          
-          <%= link_to 'Show', post %>
-          
-          <% if post.user == current_user %>
-            <%= link_to 'Edit', edit_post_path(post) %>
-            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
 
-        <% end %>
+
+
+        <div id="posts" class="transitions-enabled"> 
+          <% @posts.each do |post| %>
+            <div class="box panel panel-default">
+              <%= link_to image_tag(post.image.url(:medium)), post %>
+                <div class="panel-body">
+                  <p><%= link_to post.title, post %></p>
+                  <h4><%= link_to post.subtitle, post %></h4>
+                </div>
+            </div>
+            <hr><hr>
+          <% end %>
+        </div>
+
+
         
       </div>
     </div> 

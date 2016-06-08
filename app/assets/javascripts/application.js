@@ -12,6 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
+//= require jquery.turbolinks
 //= require froala_editor.min.js
 //= require plugins/align.min.js
 //= require plugins/code_view.min.js
@@ -31,4 +33,5 @@
 //= require plugins/table.min.js
 //= require plugins/video.min.js
 //= require turbolinks
+//= require masonry/jquery.masonry 
 //= require_tree .

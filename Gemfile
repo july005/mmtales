@@ -22,6 +22,8 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
 gem 'aws-sdk', '>= 2.0.34'
 gem 'acts-as-taggable-on'
+gem 'jquery-turbolinks'
+gem 'masonry-rails'
 
   group :development, :test do
     gem 'better_errors'
