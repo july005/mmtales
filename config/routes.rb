@@ -1,7 +1,16 @@
 Rails.application.routes.draw do
+  get 'tags/index'
+
+  get 'tags/show'
+
+  get 'tags/index'
+
+  get 'tags/show--skip-template-engine'
+
   devise_for :users
   resources :posts
   root to: 'posts#index'
+  resources :tags, only: [:index, :show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

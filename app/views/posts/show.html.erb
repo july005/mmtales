@@ -1,19 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-
 <%= image_tag @post.image.url(:medium), :class => "img-responsive, center-block" %>
 
-<h1>
-  <%= @post.title %>
-</h1>
+<h1><%= @post.title %></h1>
 
-<h2>
-  <%= @post.subtitle %>
-</h2>
+<h2><%= @post.subtitle %></h2>
 
-<div class="froala-view">
-  <%= @post.body.html_safe %>
-</div>
+<div class="froala-view"><%= @post.body.html_safe %></div>
+
+<hr><h5><strong>Categories:</strong> <%= render @post.tags %> </h5><hr>
 
 <% if @post.user == current_user %>   
   <%= link_to 'Edit', edit_post_path(@post) %>

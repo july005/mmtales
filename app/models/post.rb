@@ -23,6 +23,8 @@ class Post < ActiveRecord::Base
  		s3_region: ENV["aws_region"]
  		
  		validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+
+ 		acts_as_taggable_on :tags
  
 	def sanitize_body
 	 	Sanitize.fragment(body, Sanitize::Config::RELAXED)

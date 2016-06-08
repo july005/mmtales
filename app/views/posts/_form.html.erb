@@ -21,9 +21,14 @@
     <%= f.label :subtitle %><br>
     <%= f.text_field :subtitle %>
   </div>
+  <div class="field">
+    <%= f.label :tags %><br>
+    <%= f.text_field :tag_list %>
+  </div>
   </br>
     <%= f.label :body %>
     <%= f.text_area :body, id: "wysiwyg" %> 
+  
   <div class="actions">
     <%= f.submit %>
   </div>
