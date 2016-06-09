@@ -1,8 +1,17 @@
 <div class="container">
 	<div class="jumbotron">
-		<h1>Here's all the posts in the <%= @tag.name %> category</h1>
+		<h1>So you want to know about <strong> <%= @tag.name %> </strong></h1>
 		<hr>
-		<div><%= render @posts %></div>
+		<div id="posts" class="transitions-enabled"> 
+		  <% @posts.each do |post| %>
+		    <div class="box panel panel-default">
+		    	<%= link_to image_tag(post.image.url(:small)), post%>
+		      <div class="panel-body">
+		        <p><%= post.title %></p>
+		      </div>
+		    </div>
+		  <% end %>
+		</div>
 	</div>
 </div>
 
