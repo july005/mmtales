@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @contact = Contact.new
   end
 
   def show
@@ -13,6 +14,7 @@ class PostsController < ApplicationController
   def new
     @hash = AmazonSignature::data_hash
     @post = current_user.posts.build
+    @contact = Contact.new
   end
 
   def edit
@@ -32,10 +34,16 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+    @contact = Contact.new(params[:contact])
+    @contact.request = request
+    if @contact.deliver
+      flash.now[:error] = nil
+    else
+      flash.now[:error] = "Oops! Looks like there was a bump in the road. Let's try this again."
+      render :new
+    end
   end
 
-  # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
   def update
     respond_to do |format|
       if @post.update(post_params)
@@ -48,8 +56,6 @@ class PostsController < ApplicationController
     end
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post.destroy
     respond_to do |format|

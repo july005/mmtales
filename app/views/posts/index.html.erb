@@ -4,10 +4,6 @@
   <div class="container">
     <div class="jumbotron">
       <div id="greetings" class="froala-view" class="float-center">
-        
-
-
-
         <div id="posts" class="transitions-enabled"> 
           <% @posts.each do |post| %>
             <div class="box panel panel-default">
@@ -20,8 +16,7 @@
             <hr><hr>
           <% end %>
         </div>
-
-
+      <%= render 'contacts/new' %>
         
       </div>
     </div> 
