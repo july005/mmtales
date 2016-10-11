@@ -24,6 +24,7 @@ gem 'aws-sdk', '>= 2.0.34'
 gem 'acts-as-taggable-on'
 gem 'jquery-turbolinks'
 gem 'masonry-rails'
+gem 'mail_form', '~> 1.5', '>= 1.5.1'
 
   group :development, :test do
     gem 'better_errors'
