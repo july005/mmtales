@@ -19,6 +19,13 @@ class PostsController < ApplicationController
                     title: "Monorails and Mickey Tales",
                     description: @post.title,
                     image: @post.image.url
+                  },
+                  og: {
+                    title:  "Monorails and Mickey Tales",
+                    description: @post.title,
+                    type: 'website',
+                    url: post_url(@post),
+                    image: @post.image.url
                   }
   end
 
