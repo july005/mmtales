@@ -26,6 +26,9 @@ class PostsController < ApplicationController
                     type: 'website',
                     url: post_url(@post),
                     image: @post.image.url
+                  },
+                  alternate: {
+                    href: 'http://www.monorailsandmickeytales.com/feed.rss', type: 'application/rss+xml', title: 'RSS'
                   }
   end
 
