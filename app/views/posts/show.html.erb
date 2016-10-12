@@ -9,11 +9,13 @@
 
 <div class="froala-view"><%= @post.body.html_safe %></div>
 
-<hr><h5><strong>Categories:</strong> <%= render @post.tags %> </h5><hr>
+<hr>
+<h3><strong>Categories:</strong> <%= render @post.tags %> </h3>
+<hr>
 
 <% if @post.user == current_user %>   
-  <%= link_to 'Edit', edit_post_path(@post) %>
-  <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary btn-lg' %>
+  <%= link_to 'Destroy', @post, class: 'btn btn-danger btn-lg', method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 
 <%= link_to 'Back', posts_path, class: 'btn btn-info btn-lg' %>
