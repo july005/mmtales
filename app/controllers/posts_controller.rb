@@ -18,7 +18,7 @@ class PostsController < ApplicationController
                     site: "@disneywiz",
                     title: "Monorails and Mickey Tales",
                     description: @post.title,
-                    image: @post.image
+                    image: @post.image.url
                   }
   end
 
