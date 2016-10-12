@@ -34,4 +34,5 @@
 //= require plugins/video.min.js
 //= require turbolinks
 //= require masonry/jquery.masonry 
+//= require social-share-button
 //= require_tree .

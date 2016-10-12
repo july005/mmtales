@@ -26,6 +26,7 @@ gem 'jquery-turbolinks'
 gem 'masonry-rails'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'meta-tags'
+gem 'social-share-button'
 
   group :development, :test do
     gem 'better_errors'

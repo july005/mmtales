@@ -4,7 +4,7 @@
 	<%= image_tag @post.image.url(:medium), :class => "img-responsive, center-block" %>
 
 <h1><%= @post.title %></h1>
-
+<h1><%= social_share_button_tag(@post.title) %></h1>
 <h2><%= @post.subtitle %></h2>
 
 <div class="froala-view"><%= @post.body.html_safe %></div>
@@ -12,6 +12,7 @@
 <hr>
 <h3><strong>Categories:</strong> <%= render @post.tags %> </h3>
 <hr>
+
 
 <% if @post.user == current_user %>   
   <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary btn-lg' %>
