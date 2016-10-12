@@ -9,6 +9,17 @@ class PostsController < ApplicationController
   end
 
   def show
+    set_meta_tags title: @post.title,
+                  site: 'Monorails and Mickey Tales',
+                  reverse: true,
+                  description: @post.subtitle, 
+                  twitter: {
+                    card: "summary",
+                    site: "@disneywiz",
+                    title: "Monorails and Mickey Tales",
+                    description: @post.title,
+                    image: @post.image
+                  }
   end
 
   def new
