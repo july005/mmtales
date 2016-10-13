@@ -6,6 +6,8 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @contact = Contact.new
+    @todays_posts = Post.all.where("created_at > ? AND created_at < ?", Time.now.beginning_of_day, Time.now.end_of_day)
+    @previous_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day)
   end
 
   def show

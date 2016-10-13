@@ -44,16 +44,116 @@
   background: white;
 }
 
+body {
+  background-color: #fff;
+  font-size: 13px;
+  line-height: 18px;
+}
+
 h1 {
   text-align: center;
   color: #76c4ae;
+  font-family: 'Delius Swash Caps', cursive;
+}
+.nobootstrap { /* 100+1=101 priority score, yay! */
+  font-family: 'Delius Swash Caps', cursive;
+  color: inherit;
 }
 
+h2 {
+  font-family: 'Delius Swash Caps', cursive;
+}
 .float_center {
   float: right;
   position: relative;
   left: -50%; /* or right 50% */
   text-align: left;
+}
+
+p, ol, ul, td {
+  margin: 0 0 10.5px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+.lead {
+  margin-bottom: 21px;
+  font-size: 17px;
+  font-weight: 200;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .lead {
+    font-size: 22.5px;
+  }
+}
+small,
+.small {
+  font-size: 85%;
+}
+cite {
+  font-style: normal;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-muted {
+  color: #b4bcc2;
+}
+.text-primary {
+  color: #2c3e50;
+}
+
+/* Nav */
+
+.navbar {
+  position: relative;
+  top: 0;
+  min-height: 20px;
+  margin-bottom: 0; 
+  width: 100%;
+  z-index: 999;
+  border-radius: 0; 
+}
+
+.navbar-default {
+  position: fixed;
+  color: black;
+  top: 0; 
+  min-height: 20px;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  color: #ECEBEB;
+}
+
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover {
+  color: #ECEBEB;
+}
+
+.navbar-brand {
+  font-family: 'Delius Swash Caps', cursive;
+  color: #ECEBEB;
+  letter-spacing: 3px;
+  font-weight: 400 !important;
 }
 
 

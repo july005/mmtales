@@ -13,8 +13,8 @@
  *= require froala_editor.min.css
  *= require froala_style.min.css
  *= require font-awesome
- *= require erinscss.scss
- *= require 'masonry/transitions' 
+ *= require 'masonry/transitions'
+ *= require erinscss.scss 
  *= require_tree .
  *= require_self
  */
@@ -22,3 +22,4 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "social-share-button";
+@import url('https://fonts.googleapis.com/css?family=Delius+Swash+Caps');
