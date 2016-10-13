@@ -32,6 +32,8 @@ class PostsController < ApplicationController
                   alternate: {
                     href: 'http://www.monorailsandmickeytales.com/feed.rss', type: 'application/rss+xml', title: 'RSS'
                   }
+    @todays_posts = Post.all.where("created_at > ? AND created_at < ?", Time.now.beginning_of_day, Time.now.end_of_day)
+    @previous_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day)
   end
 
   def new
