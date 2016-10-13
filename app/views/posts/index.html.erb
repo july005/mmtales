@@ -58,13 +58,17 @@
 
 <!-- Today's Answers -->
 
-<div id="useit" class="content-section-a" style="border-top: 0">
-  <div class="container">
-    <div class="row wow bounceInUp" >
-      <%= render 'todaysindex' %>   
+  <div id="useit" class="content-section-a" style="border-top: 0">
+    <div class="container">
+      <div class="row wow bounceInUp" >
+        <% if @todays_posts.exists? %>
+          <%= render 'todaysindex' %>   
+          <% else %>
+          <%= render 'nonefortodaysindex' %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>
 <hr>
 
 <!-- End Today's Answers -->
