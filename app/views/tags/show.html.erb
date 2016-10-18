@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="jumbotron">
-		<h1>So you want to know about <strong> <%= @tag.name %> </strong></h1>
+		<h1>Topic:<strong> <%= @tag.name.downcase %> </strong></h1>
 		<hr>
 		<div id="posts" class="transitions-enabled"> 
 		  <% @posts.each do |post| %>
@@ -12,6 +12,7 @@
 		    </div>
 		  <% end %>
 		</div>
+		<%= link_to 'Back', posts_path, class: "btn btn-success btn-lg" %>
 	</div>
 </div>
 
