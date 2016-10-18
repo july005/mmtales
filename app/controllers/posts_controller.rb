@@ -39,6 +39,14 @@ class PostsController < ApplicationController
     @previous_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day)
   end
 
+  def search
+    if params[:query].present?
+      @posts = Post.search_title(params[:query])
+    else
+      @posts = Post.all
+    end
+  end
+
   def new
     @hash = AmazonSignature::data_hash
     @post = current_user.posts.build

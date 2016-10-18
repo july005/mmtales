@@ -1,11 +1,9 @@
 <html lang="en">
 
-
 </body>
+
     <nav class="navbar-default" role="navigation">
         <div class="container">
-            
-
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -18,12 +16,10 @@
                 
             </div>
 
-
             <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="menuItem"><a href="#contact">Ask</a></li>
-                    <%= link_to 'Ask', root_path(:anchor => 'contact'), class: "menuItem" %>
-                    <%= link_to 'Latest Tips', root_path(:anchor => 'useit'), class: "menuItem" %>
+                    <%= link_to 'Ask a Question', root_path(:anchor => 'contact'), class: "menuItem" %>
+                    <%= link_to "Today's Answers", root_path(:anchor => 'useit'), class: "menuItem" %>
                     <%= link_to 'Topics', root_path(:anchor => 'whatis'), class: "menuItem" %>
                     <%= link_to 'About', root_path(:anchor => 'screen'), class: "menuItem" %>
                 </ul>
@@ -31,70 +27,6 @@
 
         </div>
     </nav>
-
-
-<!-- JavaScript  -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/script.js"></script>
-    <!-- StikyMenu  -->
-    <script src="js/stickUp.min.js"></script>
-    <script type="text/javascript">
-      jQuery(function($) {
-        $(document).ready( function() {
-          $('.navbar-default').stickUp();
-          
-        });
-      });
-    
-    </script>
-    <!-- Smoothscroll   -->   
-    <script type="text/javascript" src="js/jquery.corner.js"></script> 
-    <script src="js/wow.min.js"></script>
-    <script>
-     new WOW().init();
-    </script>
-    <script src="js/classie.js"></script>
-    <script src="js/uiMorphingButton_inflow.js"></script>
-    <!-- Magnific Popup core JS file -->
-    <script src="js/jquery.magnific-popup.js"></script> 
-<!-- jQuery  -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-
-    <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    </script>
 </body>
 
 </html>

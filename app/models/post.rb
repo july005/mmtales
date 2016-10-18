@@ -1,8 +1,12 @@
 class Post < ActiveRecord::Base
 	require 'sanitize'
-	before_save :sanitize_body
+	include PgSearch
+	pg_search_scope :search_title, :against => [:title, :subtitle, :body]
 
+
+	before_save :sanitize_body
 	belongs_to :user
+	
 
 	has_attached_file :image,
 		storage: :s3,

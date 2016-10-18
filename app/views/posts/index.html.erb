@@ -102,19 +102,16 @@
           <% end %>
         </div>
       </div>
+
+      <p class="lead" style="margin-top:0">Search</p>
+      <%= form_tag(posts_search_path, method: "get") do %>
+        <%= text_field_tag(:query) %>
+        <%= submit_tag("Search") %>
+      <% end %>
       
-      <script>
-        (function() {
-          var cx = '015811318795853005988:gy6ovhhxcos';
-          var gcse = document.createElement('script');
-          gcse.type = 'text/javascript';
-          gcse.async = true;
-          gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-          var s = document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(gcse, s);
-        })();
-      </script>
-      <gcse:search></gcse:search>
+
+
+
 
     </div> 
   </div>

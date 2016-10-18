@@ -1,0 +1,18 @@
+<%= render 'layouts/navbar' %> 
+<h1 class="nobootstrap">Posts that discuss: <strong><%= params[:query].inspect.gsub('"', '')%></strong></h1>    
+  <div id="greetings" class="froala-view" class="float-center">
+    <div id="posts" class="transitions-enabled"> 
+      <% @posts.each do |post| %>
+          <div class="box panel panel-default">
+            <%= link_to image_tag(post.image.url(:medium)), post %>
+              <div class="panel-body">
+                <p><%= link_to post.title, post %></p>
+                <h4><%= link_to post.subtitle, post %></h4>
+              </div>
+          </div>
+          <hr><hr>
+        <% end %>
+      </div>
+    </div>
+<%= link_to 'Back', posts_path, class: 'btn btn-info btn-lg' %>
+<%= render 'layouts/footer' %> 
