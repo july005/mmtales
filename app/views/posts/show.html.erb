@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<div>
-	<%= image_tag @post.image.url(:medium), :class => "img-responsive, center-block" %>
-
-<h1><%= @post.title %></h1>
+<%= render 'layouts/navbar' %> <div>
+<%= image_tag @post.image.url(:large), :class => "img-responsive, center-block" %>
+<h1 class="nobootstrap"><%= @post.title %></h1>
 <h1><%= social_share_button_tag(@post.title) %></h1>
 <h2><%= @post.subtitle %></h2>
 
