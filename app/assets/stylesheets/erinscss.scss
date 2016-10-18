@@ -50,22 +50,20 @@ body {
   line-height: 18px;
 }
 
-
-
+/* CONTACT FORM */
 
 #contactme {
-
     background: #8D9698 url(//orig03.deviantart.net/b762/f/2008/266/0/8/paper_by_francy84.jpg) repeat fixed 0 0;
     /*background: url("assets/images/missing.png") no-repeat;*/
     background-attachment: fixed; 
+    font-family: 'Londrina Shadow', cursive;
+    font-size: 2em;
+
 }
 
 .form-control {
     border: 2px solid #bdc3c7;
     background: #8D9698 url(//orig03.deviantart.net/b762/f/2008/266/0/8/paper_by_francy84.jpg) repeat fixed 0 0;
-    color: #4d4d4d;
-    font-family: 'Londrina Shadow', cursive;
-    font-size: 2em;
     line-height: 1.467;
     padding: 8px 12px;
     height: 42px;
@@ -77,7 +75,14 @@ body {
     transition: border .25s linear, color .25s linear, background-color .25s linear;
 }
 
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: text-indent 0.5s 0.5s ease; 
+  text-indent: -100%;
+  opacity: 1;
+  clear: both;
+}
 
+/* END CONTACT FORM */
 
 h1 {
   text-align: center;

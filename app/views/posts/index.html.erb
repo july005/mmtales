@@ -78,9 +78,7 @@
 
 <!-- End Today's Answers -->
 
-
-
-
+<!-- TOPICS -->
 
 </div>
   <h1 class="nobootstrap">Topics</h1>
@@ -88,13 +86,22 @@
   <div class="container">
     <div class="jumbotron">
       
+      <!-- Search box -->
+
+      <%= form_tag(posts_search_path, method: "get") do %>
+        <%= text_field_tag(:query) %>
+        <%= submit_tag("Search", class: "btn btn-primary") %>
+      <% end %>
+
+      <!-- End Search box -->
+
       <div id="greetings" class="froala-view" class="float-center">
         <div id="posts" class="transitions-enabled"> 
           <% @previous_posts.each do |post| %>
             <div class="box panel panel-default">
               <%= link_to image_tag(post.image.url(:medium)), post %>
                 <div class="panel-body">
-                  <p><%= link_to post.title, post %></p>
+                  <p class="lead"><%= link_to post.title, post %></p>
                   <h4><%= link_to post.subtitle, post %></h4>
                 </div>
             </div>
@@ -102,20 +109,11 @@
           <% end %>
         </div>
       </div>
-
-      <p class="lead" style="margin-top:0">Search</p>
-      <%= form_tag(posts_search_path, method: "get") do %>
-        <%= text_field_tag(:query) %>
-        <%= submit_tag("Search") %>
-      <% end %>
-      
-
-
-
-
+    
     </div> 
   </div>
 
+<!-- End TOPICS -->
 
-     <hr><hr><hr>
+<hr><hr><hr>
   

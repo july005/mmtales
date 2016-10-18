@@ -1,19 +1,20 @@
 <div>
 	<%= form_for @contact do |f| %>
 
-			<%= f.text_area :message, as: :text, :autofocus=>true, :id => "contactme", class: 'form-control', rows: 6, :placeholder => "Dear Monorails & Mickey Tales:" %>
+			<%= f.text_area :message, as: :text, :autofocus=>true, :id => "contactme", class: 'form-control', rows: 6, :value => "Dear Monorails & Mickey Tales: ", :onfocus => "this.value = this.value;" %>
+
 			<br>
 
 
 		<div class="row">
 			
 			<div class="form-group col-xs-6">
-				<%= f.text_field :name, required: true, class: 'form-control', :placeholder => "Name" %>
+				<%= f.text_field :name, required: true, :id => "contactme", class: 'form-control', :placeholder => "Name" %>
 				<br>
 			</div>
 
 			<div class="form-group col-xs-6">
-				<%= f.email_field :email, required: true, class: 'form-control', :placeholder => "Email"  %>
+				<%= f.email_field :email, required: true, :id => "contactme", class: 'form-control', :placeholder => "Email"  %>
 			</div>
 
 		</div>
@@ -29,3 +30,11 @@
 
 	</div>	
 	<% end %>
+
+<script>
+var contactmeInput = $('#contactme');
+contactmeInput.val(contactmeInput.val());
+var strLength= contactmeInput.val().length;
+contactmeInput.focus();
+contactmeInput[0].setSelectionRange(strLength, strLength);
+</script>
