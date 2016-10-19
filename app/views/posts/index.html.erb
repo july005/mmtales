@@ -43,17 +43,14 @@
           <!-- <h2 class="h1_home wow fadeIn"> Ask      <i class="fa fa-magic"></i></h2> --> 
           <br>
           <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "60x60") %> 
-          Hi, there! I'm your Fairy Godmother. <br><br></h1>
-          <p class="lead" style="margin-top:0">
-            Kidding! I'm just a Disney World nerd who daydreams about FastPasses and dining plans.<br>Need help planning a trip?<br>Send me your questions <i class="fa fa-arrow-down" aria-hidden="true"></i> then check back later today for your answers!
+          Hi, there! Need help planning a Disney trip?</h1>
+          <p class="welcome" style="margin-top:0">
+            <br><strong>Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check back later today for your answers!
           </p>
           <br>
           <%= render 'contacts/new' %> 
-          <br>
-          <hr>    
           <br>        
         </div>
-
     </div>
   </div>
 <!-- </div> -->
@@ -61,15 +58,17 @@
 
 <!-- Today's Answers -->
 
-<div class="section">
+<div class="section answers">
   <span id="useit" class="anchor"></span>
     <div class="container">
       <div class="row wow bounceInUp" >
+        <br>
         <% if @todays_posts.exists? %>
           <%= render 'todaysindex' %>   
           <% else %>
           <%= render 'nonefortodaysindex' %>
         <% end %>
+        <br>
       </div>
     </div>
   </div> 
@@ -81,36 +80,67 @@
 <!-- TOPICS -->
 
 </div>
-  <h1 class="nobootstrap">Topics</h1>
-  <br><br>
+
   <div class="container">
-    <div class="jumbotron">
-      
+      <h1 class="nobootstrap">Archives</h1>
       <!-- Search box -->
 
-      <%= form_tag(posts_search_path, method: "get") do %>
-        <%= text_field_tag(:query) %>
-        <%= submit_tag("Search", class: "btn btn-primary") %>
-      <% end %>
+      <h2 class="float_center">
+        <%= form_tag(posts_search_path, method: "get") do %>
+          <%= text_field_tag(:query) %>
+          <%= submit_tag("Search", class: "btn btn-primary btn-lg") %>
+        <% end %>
+      </h2>
 
       <!-- End Search box -->
 
       <div id="greetings" class="froala-view" class="float-center">
         <div id="posts" class="transitions-enabled"> 
-          <% @previous_posts.each do |post| %>
+            
             <div class="box panel panel-default">
-              <%= link_to image_tag(post.image.url(:medium)), post %>
-                <div class="panel-body">
-                  <p class="lead"><%= link_to post.title, post %></p>
-                  <h4><%= link_to post.subtitle, post %></h4>
-                </div>
+              <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
+              <div class="panel-body">
+                <p class="lead"><%= link_to 'Dining', tags_show_path(id:1) %></p>
+              </div>
             </div>
-            <hr><hr>
-          <% end %>
+
+            <div class="box panel panel-default">
+              <h1><i class="fa fa-bed" aria-hidden="true"></i></h1>
+              <div class="panel-body">
+                <p class="lead"><%= link_to 'Resorts', tags_index_path %></p>
+              </div>
+            </div>
+
+            <div class="box panel panel-default">
+              <h1><i class="fa fa-rocket" aria-hidden="true"></i></h1>
+              <div class="panel-body">
+                <p class="lead"><%= link_to 'Parks', tags_show_path(id:3) %></p>
+              </div>
+            </div>
+
+            <div class="box panel panel-default">
+              <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
+              <div class="panel-body">
+                <p class="lead"><%= link_to 'Transport', posts_path %></p>
+              </div>
+            </div>
+
+            <div class="box panel panel-default">
+              <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
+              <div class="panel-body">
+                <p class="lead"><%= link_to 'Resorts', posts_path %></p>
+              </div>
+            </div>
+
+            <div class="box panel panel-default">
+              <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
+              <div class="panel-body">
+                <p class="lead"><%= link_to 'Resorts', posts_path %></p>
+              </div>
+            </div>
         </div>
       </div>
-    
-    </div> 
+
   </div>
 
 <!-- End TOPICS -->

@@ -56,8 +56,8 @@ body {
     background: #8D9698 url(//orig03.deviantart.net/b762/f/2008/266/0/8/paper_by_francy84.jpg) repeat fixed 0 0;
     /*background: url("assets/images/missing.png") no-repeat;*/
     background-attachment: fixed; 
-    font-family: 'Londrina Shadow', cursive;
-    font-size: 2em;
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5em;
 
 }
 
@@ -86,8 +86,8 @@ body {
 
 h1 {
   text-align: center;
-  color: #76c4ae;
   font-family: 'Delius Swash Caps', cursive;
+  color: #76c4ae;
 }
 .nobootstrap { /* 100+1=101 priority score, yay! */
   font-family: 'Delius Swash Caps', cursive;
@@ -98,10 +98,7 @@ h2 {
   font-family: 'Delius Swash Caps', cursive;
 }
 .float_center {
-  float: right;
-  position: relative;
-  left: -50%; /* or right 50% */
-  text-align: left;
+ text-align: center;
 }
 
 p, ol, ul, td {
@@ -112,7 +109,14 @@ p, ol, ul, td {
 }
 .lead {
   margin-bottom: 21px;
-  font-size: 17px;
+  font-size: 3em;
+  font-weight: 200;
+  line-height: 1.4;
+}
+.welcome {
+  font-family: 'Delius Swash Caps', cursive;
+  margin-bottom: 21px;
+  font-size: 1.5em;
   font-weight: 200;
   line-height: 1.4;
 }
@@ -193,6 +197,10 @@ cite {
 .section {
     position: relative;
 }
+
+.answers {
+    background-color: #ECEBEB;
+  }
 
 .anchor {
     display: block;
