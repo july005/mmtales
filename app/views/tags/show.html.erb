@@ -1,6 +1,7 @@
+<%= render 'layouts/navbar' %> 
 <div class="container">
-	<div class="jumbotron">
-		<h1>Topic:<strong> <%= @tag.name.downcase %> </strong></h1>
+  <div class="jumbotron">
+    <h1 class="nobootstrap">Topic: <strong><%= @tag.name %> </strong></h1>
 		<hr>
 		<div id="posts" class="transitions-enabled"> 
 		  <% @posts.each do |post| %>
@@ -15,4 +16,4 @@
 		<%= link_to 'Back', posts_path, class: "btn btn-success btn-lg" %>
 	</div>
 </div>
-
+<%= render 'layouts/footer' %> 

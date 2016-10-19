@@ -21,7 +21,19 @@
 <%= link_to 'Back', posts_path, class: 'btn btn-info btn-lg' %>
 
 <%= render 'disqus' %>
-<%= render 'layouts/footer' %> 
+
+<footer>
+    <div class="section answers">
+        <div class="container"><div class="container answers">
+            <h1><%= social_share_button_tag(@post.title) %></h1>
+            <div class="row">
+                <p class="text-muted">Copyright &copy;monorailsandmickeytales 2016</p>
+                 <p>www.monorailsandmickeytales.com is not affiliated with, authorized or endorsed by, or in any way officially connected with The Walt Disney Company</p>
+                <hr class="small">
+            </div>
+        </div>
+    </div>
+</footer>
 
 </div>
 
