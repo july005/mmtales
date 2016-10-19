@@ -6,9 +6,11 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @contact = Contact.new
-    @todays_posts = Post.all.where("created_at > ? AND created_at < ?", Time.now.beginning_of_day, Time.now.end_of_day)
+    @todays_posts = Post.all.where("created_at > ? AND created_at < ?", Time.now.beginning_of_day, Time.now.end_of_day).limit(5)
     @recent_posts = Post.all.order("created_at desc").limit(5)
+    @readmore_posts = Post.all.order("created_at desc").limit(3)
     @previous_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day)
+    @tags = ActsAsTaggableOn::Tag.all
   end
 
   def show
@@ -37,6 +39,7 @@ class PostsController < ApplicationController
     @todays_posts = Post.all.where("created_at > ? AND created_at < ?", Time.now.beginning_of_day, Time.now.end_of_day)
     @recent_posts = Post.all.order("created_at desc").limit(5)
     @previous_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day)
+    @readmore_posts = Post.all.where.not(id: @post.id).order("created_at desc").limit(3)
   end
 
   def search
@@ -102,7 +105,6 @@ class PostsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])
     end

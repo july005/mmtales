@@ -1,0 +1,10 @@
+		<div id="posts" class="transitions-enabled"> 
+		  <% @post.tags.each do |relpost| %>
+		    <div class="box panel panel-default">
+		    	
+		      <div class="panel-body">
+		        <p><%= link_to relpost.title, relpost %></p>
+		      </div>
+		    </div>
+		  <% end %>
+		</div>

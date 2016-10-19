@@ -34,4 +34,13 @@ class Post < ActiveRecord::Base
 	 	Sanitize.fragment(body, Sanitize::Config::RELAXED)
 	end
 
+	def relatedposts
+    post_array = []
+    self.tags.each do |tag|
+      post_array < @post.tags
+    end
+    post_array.uniq.delete(self)
+  end
+
+
 end

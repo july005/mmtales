@@ -6,34 +6,52 @@
 
     <%= image_tag @post.image.url(:large), :class => "img-responsive, center-block" %>
     <h1 class="nobootstrap"><%= @post.title %></h1>
-    <h2 class="posts"><%= @post.subtitle %></h2>
-    <h1><%= social_share_button_tag(@post.title) %></h1>
-
+    <h2 class="posts"><%= @post.subtitle %><br>
+      
+    </h2>
     <div class="froala-view"><%= @post.body.html_safe %></div>
+    <hr>
 
+    <div class="row">
+      <h3 class="postshow">
+        <strong>Topics:</strong> 
+        <%= render @post.tags %> 
+        <%= social_share_button_tag(@post.title) %> 
+      </h3>
+    </div>
     <hr>
-    <h3><strong>Read more posts about:</strong> <%= render @post.tags %> (INDEX POSTS TAGGED WITH THIS POSTS TAGS HERE, LIMIT DESC 6 using (in posts_controller): @tagged.posts = Post.all.where(...??) like I did with @recent_posts ... but also need to define in index what is @tag maybe </h3>
-    <hr>
-    <div id="posts" class="transitions-enabled"> 
-      <% @posts.each do |post| %>
+
+  <!-- Recent posts -->
+
+    <h2 class="posts">Read other recent posts:</h2>
+    <div id="posts" class="transitions-enabled">   
+      <% @readmore_posts.each do |post| %>
         <div class="box panel panel-default">
-          <%= link_to image_tag(post.image.url(:small)), post%>
+          <%= link_to image_tag(post.image.url(:small)), post %>
           <div class="panel-body">
-            <p><%= post.title %></p>
+            <p><%= link_to post.title, post %></p>
           </div>
         </div>
       <% end %>
     </div>
     <hr>
+    <%= link_to 'Back', posts_path, class: 'btn btn-info btn-lg' %>
+    <hr>
+  <!-- Comments -->   
+    
+    <%= render 'disqus' %><br>
+    
+
+  <!-- Code for related posts would go here -->
+    
+    </div>
 
     <% if @post.user == current_user %>   
       <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary btn-lg' %>
       <%= link_to 'Destroy', @post, class: 'btn btn-danger btn-lg', method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
 
-    <%= link_to 'Back', posts_path, class: 'btn btn-info btn-lg' %>
-
-    <%= render 'disqus' %>
+    
 
   </div>
 </div>

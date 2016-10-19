@@ -1,6 +1,7 @@
 <div class="container">
     <div class="col-md-12">
         <div class="row">
+            <% if @recent_posts.present? %>
             <div class="col-md-7">
                     <%= link_to post_path(@recent_posts.last) do %>
                     <%= image_tag @recent_posts.last.image.url, :class => "img-responsive" %>
@@ -19,6 +20,8 @@
                         </p>
                         <hr>
                     <% end %>
+            <% end %>
+
             </div> 
             <br>
         </div>
