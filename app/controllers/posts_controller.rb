@@ -9,7 +9,6 @@ class PostsController < ApplicationController
     @todays_posts = Post.all.where("created_at > ? AND created_at < ?", Time.now.beginning_of_day, Time.now.end_of_day)
     @recent_posts = Post.all.order("created_at desc").limit(5)
     @previous_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day)
-    @tagged.posts = Post.all.where
   end
 
   def show
