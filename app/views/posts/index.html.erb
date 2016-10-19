@@ -25,8 +25,8 @@
       <ul class="nav navbar-nav">
         <li class="menuItem"><a href="#contact">Ask a Question</a></li>
         <li class="menuItem"><a href="#useit">Today's Answers</a></li>
-        <li class="menuItem"><a href="#whatis">Archive</a></li>
-        <li class="menuItem"><a href="#screen">About</a></li>
+        <li class="menuItem"><a href="#whatis">Topics</a></li>
+        <li class="menuItem"><a href="#screen"><i class="fa fa-search" aria-hidden="true"></i></a></li>
       </ul>
     </div>
   </div>
@@ -83,17 +83,7 @@
 <div class="section">
   <span id="whatis" class="anchor"></span>
     <div class="container">
-      <h1 class="nobootstrap">Archives</h1>
-      <!-- Search box -->
-
-      <h2 class="float_center">
-        <%= form_tag(posts_search_path, method: "get") do %>
-          <%= text_field_tag(:query) %>
-          <%= submit_tag("Search", class: "btn btn-primary btn-lg") %>
-        <% end %>
-      </h2>
-
-      <!-- End Search box -->
+      <h1 class="nobootstrap">Topics</h1>
 
       <div id="greetings" class="froala-view" class="float-center">
         <div id="posts" class="transitions-enabled"> 
@@ -148,6 +138,24 @@
 
 <!-- End TOPICS -->
 
-<hr> <hr>
+      
+<!-- Search box -->
+<div class="section answers">
+  <span id="screen" class="anchor"></span>
+    <div class="container">
+      <h1 class="nobootstrap">Find <i class="fa fa-search" aria-hidden="true"></i></h1>
+
+      <h2 class="float_center">
+        <%= form_tag(posts_search_path, method: "get") do %>
+          <%= text_field_tag(:query) %>
+          <h1 class="nobootstrap"><%= submit_tag("Search", class: "btn btn-primary btn-lg") %></h1>
+        <% end %>
+      </h2>
+    </div>
+  </div>
+</div>
+
+      <!-- End Search box -->
+
 <%= render 'layouts/footer' %> 
   
