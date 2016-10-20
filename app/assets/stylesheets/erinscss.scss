@@ -46,7 +46,6 @@
 
 body {
   background-color: #fff;
-  font-size: 13px;
   line-height: 18px;
 }
 
@@ -92,10 +91,18 @@ h1 {
 .nobootstrap { /* 100+1=101 priority score, yay! */
   font-family: 'Delius Swash Caps', cursive;
   color: inherit;
+  font-size: calc(0.75em + 4.2vmin);
+}
+.sectionhead {
+  font-family: 'Delius Swash Caps', cursive;
+  color: inherit;
+  font-size: calc(0.75em + 3vmin);
 }
 
 h2 {
   font-family: 'Delius Swash Caps', cursive;
+  font-size: calc(0.75em + 5vmin);
+
 }
 .float_center {
  text-align: center;
@@ -109,6 +116,12 @@ h3 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.posttitle {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: calc(0.75em + 2vmin);
+  margin-left: 2vmin;
+}
+
 .postshow {
   font-family: 'Delius Swash Caps', cursive;
   text-align: left;
@@ -118,23 +131,24 @@ h3 {
 p, ol, ul, td {
   margin: 0 0 10.5px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 2vmin;
   line-height: 18px;
 }
 .froalapara{
     line-height: 130%;
-    font-size: 1em;
+    font-size: 2vmin;
 }
 .froalahead{
-  font-size: 2em;
+  font-size: 3.0vh;
   color: red;
 }
 
 .lead {
+  font-family: 'Delius Swash Caps', cursive;
   margin-bottom: 21px;
-  font-size: 3em;
+  font-size: 2.5vmin;
   font-weight: 200;
-  line-height: 1.4;
+  line-height: 130%;
 }
 .welcome {
   font-family: 'Delius Swash Caps', cursive;
@@ -214,6 +228,7 @@ cite {
   font-family: 'Delius Swash Caps', cursive;
   color: #ECEBEB;
   letter-spacing: 3px;
+  font-size: 2vmin;
   font-weight: 400 !important;
 }
 
