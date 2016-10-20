@@ -55,6 +55,15 @@
         signature: '<%= @hash[:signature] %>',
       }
     },
+    fontFamily: {
+        "Roboto,sans-serif": 'para - Roboto',
+        "'Delius Swash Caps',sans-serif": 'head - Delius',
+      },
+      fontFamilySelection: true,
+    paragraphStyles: {
+        froalapara: 'Para',
+        froalahead: 'Heading',
+      },
     fileUploadToS3: {
       bucket: '<%= @hash[:bucket] %>',
       region: 's3', // Change the region if it is different
@@ -72,4 +81,7 @@
     }
  })
 </script>
+
+
+      
 

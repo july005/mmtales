@@ -6,7 +6,7 @@
 
     <%= image_tag @post.image.url(:large), :class => "img-responsive, center-block" %>
     <h1 class="nobootstrap"><%= @post.title %></h1>
-    <h2 class="posts"><%= @post.subtitle %><br>
+    <h2 class="posts"><%= @post.subtitle %><br><br>
       
     </h2>
     <div class="froala-view"><%= @post.body.html_safe %></div>
@@ -68,6 +68,7 @@
         </div>
     </div>
 </footer>
+
 
 
 

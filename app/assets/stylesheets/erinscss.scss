@@ -115,13 +115,21 @@ h3 {
   margin-left: 0.5em;
 }
 
-
 p, ol, ul, td {
   margin: 0 0 10.5px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
+.froalapara{
+    line-height: 130%;
+    font-size: 1em;
+}
+.froalahead{
+  font-size: 2em;
+  color: red;
+}
+
 .lead {
   margin-bottom: 21px;
   font-size: 3em;
