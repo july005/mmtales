@@ -235,6 +235,7 @@ cite {
 .navbar-brand {
   font-family: 'Delius Swash Caps', cursive;
   color: #ECEBEB;
+  letter-spacing: 2px;
   font-size: 2vmin;
   font-weight: 400 !important;
 }
@@ -263,7 +264,7 @@ cite {
 @media screen and (max-width: 640px) {
     .mobileNavsmall {
         display: none !important;
-        letter-spacing: 1px;
+        letter-spacing: 0px;
     }
 }
 @media screen and (min-width: 640px) {

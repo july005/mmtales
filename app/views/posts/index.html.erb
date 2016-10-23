@@ -21,10 +21,10 @@
 
       <!-- SHOW LOGO ONLY IF MOBILE SIZE GREATER THAN 640 px WIDE -->
 
-      <div class="mobileNavsmall">
+      <div class="mobileNavbig">
         <a class="navbar-brand" href="#home">monorails & mickey tales</a>
       </div> 
-      <div class="mobileNavbig">
+      <div class="mobileNavsmall">
         <%= link_to image_tag("fairygirledit.png", class: "rotate", height: "40px") %>
         <a class="navbar-brand" href="#home">monorails & mickey tales</a>
       </div>
@@ -56,7 +56,7 @@
           <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "60x60") %> 
           Hi, there! Need help planning a Disney trip?</h1>
           <p class="welcome" style="margin-top:0">
-            <br><strong>Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check back later today for your answers! http://keithclark.co.uk/articles/pure-css-parallax-websites/
+            <br><strong>Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check back later today for your answers!
           </p>
           <br>
           <%= render 'contacts/new' %> 
