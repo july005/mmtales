@@ -105,11 +105,11 @@
 
             <%= link_to tags_show_path(id:15) do %>
               <div class="box panel panel-default">
-                <h1><i class="fa fa-bed" aria-hidden="true"></i></h1>
-                <div class="panel-body">
-                  <p class="text-center lead"><%= link_to 'Resorts', tags_show_path(id:15) %></p>
+                <h1><%= link_to '<i class="fa fa-bed" aria-hidden="true"></i>'.html_safe, tags_show_path(id:15) %></h1>
+                  <div class="panel-body">
+                    <p class="text-center lead"><%= link_to 'Resorts', tags_show_path(id:15) %></p>
+                  </div>
                 </div>
-              </div>
             <% end %>
 
             <div class="box panel panel-default">
