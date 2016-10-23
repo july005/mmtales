@@ -259,3 +259,15 @@ cite {
     visibility: hidden;
 }
 
+/* navbar: show or not the image logo */
+
+@media screen and (max-width: 640px) {
+    .mobileNav {
+        display: none !important;
+    }
+}
+@media screen and (min-width: 640px) {
+    .mobileNavbig {
+        display: none !important;
+    }
+}
