@@ -261,13 +261,13 @@ cite {
 
 /* navbar: show logo and increase text spacing for screens wider than 640px */
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 390px) {
     .mobileNavsmall {
         display: none !important;
         letter-spacing: 0px;
     }
 }
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 390px) {
     .mobileNavbig {
         display: none !important;
     }
