@@ -1,11 +1,10 @@
 <html lang="en">
 <p id="notice"><%= notice %></p>
-
 <body id="home">
+
 <!-- Preloader -->
-  <div id="preloader">
-    <div id="status">
-    </div>
+<div id="preloader">
+  <div id="status"></div>
 
 <!-- NavBar custom only for home page-->
 
@@ -42,6 +41,7 @@
     </div>
   </div>
 </nav>
+
 <!-- End Navbar -->
 
 <!-- Contact Me -->
@@ -69,20 +69,17 @@
 
 <!-- Today's Answers -->
 
-<div class="section answers">
-  <span id="useit" class="anchor"></span>
-    <div class="container">
-      <div class="row wow bounceInUp" >
-        <br>
-        <% if @todays_posts.exists? %>
-          <%= render 'todaysindex' %>   
-          <% else %>
-          <%= render 'nonefortodaysindex' %>
-        <% end %>
-        <br>
-      </div>
-    </div>
-  </div> 
+<div class="section answers"><span id="useit" class="anchor"></span>
+  <div class="container">
+    <br>
+    <% if @todays_posts.exists? %>
+        <%= render 'todaysindex' %>   
+      <% else %>
+        <%= render 'nonefortodaysindex' %>
+    <% end %>
+    <br>
+  </div>
+</div> 
 
 <hr>
 
@@ -102,71 +99,69 @@
             <div class="box panel panel-default">
               <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
               <div class="panel-body">
-                <p class="lead"><%= link_to 'Dining', tags_show_path(id:16) %></p>
+                <p class="text-center lead"><%= link_to 'Dining', tags_show_path(id:16) %></p>
               </div>
             </div>
 
-            <div class="box panel panel-default">
-              <h1><i class="fa fa-bed" aria-hidden="true"></i></h1>
-              <div class="panel-body">
-                <p class="lead"><%= link_to 'Resorts', tags_show_path(id:15) %></p>
+            <%= link_to tags_show_path(id:15) do %>
+              <div class="box panel panel-default">
+                <h1><i class="fa fa-bed" aria-hidden="true"></i></h1>
+                <div class="panel-body">
+                  <p class="text-center lead"><%= link_to 'Resorts', tags_show_path(id:15) %></p>
+                </div>
               </div>
-            </div>
+            <% end %>
 
             <div class="box panel panel-default">
               <h1><i class="fa fa-rocket" aria-hidden="true"></i></h1>
               <div class="panel-body">
-                <p class="lead"><%= link_to 'Parks', tags_show_path(id:17) %></p>
+                <p class="text-center lead"><%= link_to 'Parks', tags_show_path(id:17) %></p>
               </div>
             </div>
 
             <div class="box panel panel-default">
               <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
               <div class="panel-body">
-                <p class="lead"><%= link_to 'Transport', posts_path %></p>
+                <p class="text-center lead"><%= link_to 'Transport', posts_path %></p>
               </div>
             </div>
 
             <div class="box panel panel-default">
               <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
               <div class="panel-body">
-                <p class="lead"><%= link_to 'All', tags_index_path %></p>
+                <p class="text-center lead"><%= link_to 'All', tags_index_path %></p>
               </div>
             </div>
 
             <div class="box panel panel-default">
               <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
               <div class="panel-body">
-                <p class="lead"><%= link_to 'Resorts', posts_path %></p>
+                <p class="text-center lead"><%= link_to 'Resorts', posts_path %></p>
               </div>
             </div>
 
         </div>
       </div>
-    </div>
-  </div>
-</div>
 
-<!-- End TOPICS -->
-
-      
+<!-- End TOPICS -->     
 <!-- SEARCH box -->
-<div class="section answers">
-  <span id="screen" class="anchor"></span>
-    <div class="container">
-      <h1 class="sectionhead">Find <i class="fa fa-search" aria-hidden="true"></i></h1>
+      <span id="screen" class="anchor"></span>
+          <h1 class="sectionhead">
+  
+              <i class="fa fa-search" aria-hidden="true"></i> BUT I WANT THIS INLINE AND FOR SOME REASON BOOTS FORM CLASS: FORM INLINE MAKES SUBMIT TAG NOT WORK
 
-      <h2 class="float_center">
-        <%= form_tag(posts_search_path, method: "get") do %>
-          <div class="form-horizontal center"><%= text_field_tag(:query) %></div>
-          <h1 class="nobootstrap"><%= submit_tag("Search", class: "btn btn-primary btn-lg") %></h1>
-        <% end %>
-      </h2>
+                  <%= form_tag(posts_search_path, method: "get") do %>
+                    <%= text_field_tag(:query) %>
+                    <%= submit_tag("Search", class: "btn btn-primary btn-lg") %>
+                  <% end %>
+       
+        </h1>
+      <hr> 
     </div>
   </div>
 </div>
 
-      <!-- End Search box -->
+<!-- End Search box -->
 
 <%= render 'layouts/footer' %> 
   

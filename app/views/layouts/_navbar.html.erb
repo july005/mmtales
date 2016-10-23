@@ -1,36 +1,45 @@
+<html lang="en">
+<p id="notice"><%= notice %></p>
 
-    <nav class="navbar-default" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-              <!-- SHOW LOGO ONLY IF MOBILE SIZE GREATER THAN 390 px WIDE -->
+<body id="home">
+<!-- Preloader -->
+  <div id="preloader">
+    <div id="status">
+    </div>
 
-              <div class="mobileNavsmall">
-                <a class="navbar-brand" href="#home">monorails & mickey tales</a>
-              </div> 
-              <div class="mobileNavbig">
-                <%= link_to image_tag("fairygirledit.png", class: "rotate", height: "40px") %>
-                <a class="navbar-brand" href="#home">monorails & mickey tales</a>
-              </div>
 
-              <!-- END SHOW LOGO -->
-                
-            </div>
+<nav class="navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+    <!-- SHOW LOGO ONLY IF MOBILE SIZE GREATER THAN 390 px WIDE -->
 
-            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <%= link_to 'Ask a Question', root_path(:anchor => 'contact'), class: "menuItem" %>
-                    <%= link_to "Today's Answers", root_path(:anchor => 'useit'), class: "menuItem" %>
-                    <%= link_to 'Topics', root_path(:anchor => 'whatis'), class: "menuItem" %>
-                    <%= link_to "<i class='fa fa-search' aria-hidden='true'></i>".html_safe, root_path(:anchor => 'screen'), class: "menuItem" %>
-                </ul>
-            </div>
-
+        <div class="mobileNavsmall">
+          <%= link_to 'monorails & mickey tales', root_path, class: "navbar-brand menuItem" %>
+          <a class="navbar-brand" href="#home">monorails & mickey tales</a>
+        </div> 
+        <div class="mobileNavbig">
+          <%= link_to image_tag("fairygirledit.png", class: "rotate", height: "40px") %>
+          <%= link_to 'monorails & mickey tales', root_path, class: "navbar-brand menuItem" %>
         </div>
-    </nav>
+
+    <!-- END SHOW LOGO -->
+        
+    </div>
+    <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li class="menuItem"><%= link_to 'Questions', root_path(:anchor => 'contact') %></li>
+        <li class="menuItem"><%= link_to "Answers", root_path(:anchor => 'useit'), class: "menuItem" %></li>
+        <li class="menuItem"><%= link_to 'Topics', root_path(:anchor => 'whatis'), class: "menuItem" %></li>
+        <li class="menuItem"><%= link_to "<i class='fa fa-search' aria-hidden='true'></i>".html_safe, root_path(:anchor => 'screen'), class: "menuItem" %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
