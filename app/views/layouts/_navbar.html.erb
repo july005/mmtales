@@ -8,8 +8,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <%= link_to image_tag("fairygirledit.png", class: "rotate", size: "40x40") %> 
-                <%= link_to 'monorails & mickey tales', root_path, class: "navbar-brand" %>
+              <!-- SHOW LOGO ONLY IF MOBILE SIZE GREATER THAN 390 px WIDE -->
+
+              <div class="mobileNavsmall">
+                <a class="navbar-brand" href="#home">monorails & mickey tales</a>
+              </div> 
+              <div class="mobileNavbig">
+                <%= link_to image_tag("fairygirledit.png", class: "rotate", height: "40px") %>
+                <a class="navbar-brand" href="#home">monorails & mickey tales</a>
+              </div>
+
+              <!-- END SHOW LOGO -->
                 
             </div>
 
