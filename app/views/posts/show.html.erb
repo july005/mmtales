@@ -4,7 +4,9 @@
 <div class="container">
   <div class="jumbotron">
 
-    <%= image_tag @post.image.url(:large), :class => "img-responsive, center-block" %>
+    <%= image_tag @post.image.url(:large), :class => "img-responsive, center-block" %> 
+    <div class="jumbotron" >
+    <p>Why isn't img-responsive making the post image smaller when resize screen?</p>
     <h1 class="nobootstrap"><%= @post.title %></h1>
     <h2 class="posts"><%= @post.subtitle %><br><br>
       

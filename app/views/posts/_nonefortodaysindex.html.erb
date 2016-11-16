@@ -1,31 +1,72 @@
 <div class="container">
     <div class="col-md-12">
-        <div class="row">
-            
+
             <% if @recent_posts.present? %>
                 
                 <h1 class="sectionhead">Recent Answers</h1><br>
-                <p>Issues: 1) below image thumbnails being resized twice but stretched... 2) I want the topics box panel to serve as a div that is clickable. Tried Googling "How to make a Rails Link with divs inside clickable?" and you can make a link_to block in Rails, but seems there can't be divs (i.e., panel, panel body) within that link_to block...3) box panel vmin sizing works great for larger screens (stretches like I want it to--maybe need columns/spans??) but then they look half-screen width on mobiles</p>
                 
-                <div id="topics" class="topics transitions-enabled"> 
+                <div id="topics" class="topics transitions-enabled">
+                    
+                    <!-- loops through @prevone_posts, then @prevtwo_posts, then @prevthree_posts, etc. 
 
-                    <% @recent_posts.each do |post| %>
-                        <div class="box1 panel panel-default">
-                            <%= link_to image_tag(post.image.url(:small)), post %>
-                            <div class="panel-body">
-                                <p class="recentpost"><%= link_to post.title, post %></p>
-                            </div>
+                    <div class="row">                        
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                            <% @prevone_posts.each do |post| %>
+                                <div class="box1 panel panel-default">
+                                    <%= link_to image_tag(post.image.url(:medium)), post %>
+                                    <div class="panel-body">
+                                        <p class="recentpost"><%= link_to post.title, post %></p>
+                                    </div>
+                                </div>
+                            <% end %>
                         </div>
-                    <% end %>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                            <% @prevtwo_posts.each do |post| %>
+                                <div class="box1 panel panel-default">
+                                    <%= link_to image_tag(post.image.url(:medium)), post %>
+                                    <div class="panel-body">
+                                        <p class="recentpost"><%= link_to post.title, post %></p>
+                                    </div>
+                                </div>
+                            <% end %>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+                            <% @prevthree_posts.each do |post| %>
+                                <div class="box1 panel panel-default">
+                                    <%= link_to image_tag(post.image.url(:medium)), post %>
+                                    <div class="panel-body">
+                                        <p class="recentpost"><%= link_to post.title, post %></p>
+                                    </div>
+                                </div>
+                            <% end %>
+                        </div>
+                    </div>
 
-                </div>
-                
+                    -->
+
+                    <!-- loops through all @recent_posts -->
+
+                    <div class="row">
+                        <% @recent_posts.each do |post| %>
+                            <div class="box1 panel panel-default">
+                                <%= link_to image_tag(post.image.url(:medium)), post %>
+                                <div class="panel-body">
+                                    <p class="recentpost"><%= link_to post.title, post %></p>
+                                </div>
+                            </div>
+                        <% end %>
+                    </div>
                 <br>
 
             <% end %>
 
-
-
         </div>
+        <div><p>Issues: 
+            1) I want the topics box panel to serve as a div that is clickable. Tried Googling "How to make a Rails Link with divs inside clickable?" and you can make a link_to block in Rails, but seems there can't be divs (i.e., panel, panel body) within that link_to block...
+            2) box panel vmin sizing works great for larger screens (stretches like I want it to but then they look half-screen width on mobiles)--
+            IDEAS: 
+            a) use Bootstrap grid with masonry and display 6 posts in separate divs by .last, then .last-1, .last-2, for most recent 6 posts like in: http://codepen.io/SitePoint/pen/mywEMR 
+            b) currently also created a responsivetranistions css file and called it in application.css.scss) 
+            c)in post.rb I can edit the :medium style dimensions but not sure how to migrate that or whatever so it registers! but also not sure I want to do that since 300 is a good max width for mobile...</p></div>
     </div>
 </div>

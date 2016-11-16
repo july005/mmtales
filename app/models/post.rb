@@ -42,5 +42,4 @@ class Post < ActiveRecord::Base
     post_array.uniq.delete(self)
   end
 
-
 end

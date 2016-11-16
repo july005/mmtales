@@ -6,9 +6,9 @@
     <hr>
     <br>
 
-      <div id="posts" class="transitions-enabled"> 
+      <div id="topics" class="transitions-enabled"> 
         <% @posts.each do |post| %>
-          <div class="box panel panel-default">
+          <div class="box1 panel panel-default">
             <%= link_to image_tag(post.image.url(:medium)), post %>
             <div class="panel-body">
             <p class="lead"><%= link_to post.title, post %></p>           

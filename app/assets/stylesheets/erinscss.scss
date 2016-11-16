@@ -290,28 +290,34 @@ cite {
     }
 }
 
-/* TRASITIONS-ENABLED BOXES BOX PANEL */
+/* TRASITIONS-ENABLED TOPICS BOX PANEL */
 
 #posts {
-  margin: 2 auto;
+  margin: auto;
 }
-
 .box {
-  margin: 5px;
-  width: 35vmin;
+  border-radius: 50%;
+  width: 300px;
+  height: 150px; 
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  margin: 3%;
+  /*width: 35vmin;*/
 }
-
 .box img {
   width: 100%;
 }
 
+/* TRANSITIONS-ENABLED RECENT POSTS PANEL */
+
 #topics {
-  margin: 2 auto;
+  margin: auto;
+  width: 100%;
 }
 
 .box1 {
-  margin: 5px;
-  width: 52vmin;
+  margin-right: 2%;
 }
 
 .box1 img {
