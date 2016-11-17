@@ -53,12 +53,25 @@
           <br>
           <!-- <h2 class="h1_home wow fadeIn"> Ask      <i class="fa fa-magic"></i></h2> --> 
           <br>
-          <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "60x60") %> 
-          Hi, there! Need help planning a Disney trip?</h1>
-          <p class="welcome" style="margin-top:0">
-            <br><strong>Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check back later today for your answers!
-          </p>
-          <br>
+          
+          <div class="mobileNavbig">
+            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "60x60") %> 
+            Hi, there! Need help planning a Disney trip?</h1>
+            <p class="welcome" style="margin-top:0">
+              <br><strong>Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check back later today for your answers!
+            </p>
+            <br>
+          </div> 
+
+          <div class="mobileNavsmall">
+            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "60x60") %> 
+            <br>Hi, there! Need help planning a Disney trip?</h1>
+            <p class="welcome" style="margin-top:0">
+              <br><strong>Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check back later today for your answers!
+            </p>
+            <br>
+          </div>
+
           <%= render 'contacts/new' %> 
           <br>        
         </div>
