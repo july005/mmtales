@@ -225,11 +225,12 @@ cite {
 }
 
 .navbar-small  {
-  position: fixed;
-  top: 0;
   margin-bottom: 0; 
+  display: table-cell;
+  height: 50px; 
+  padding: 0 20px;
+  vertical-align: middle;
   width: 70%;
-  z-index: 999;
   border-radius: 0; 
   font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
   color: black;
