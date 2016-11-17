@@ -227,7 +227,7 @@ cite {
 .navbar-small  {
   position: relative;
   top: 0;
-  min-height: 12px;
+  min-height:20px;
   margin-bottom: 0; 
   width: 90%;
   z-index: 999;
@@ -265,7 +265,7 @@ cite {
   font-weight: 400 !important;
 }
 
-.navbar-brand .small {
+.navbar-brand .navbar-small {
   font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
   color: #ECEBEB;
   letter-spacing: 1px;
