@@ -83,15 +83,15 @@
 <!-- Today's Answers -->
 
 <div class="section answers">
-  <span id="useit" class="anchor"></span>
   <div class="container">
     <br>
+    <span id="useit" class="anchor"></span>
     <% if @todays_posts.exists? %>
         <%= render 'todaysindex' %>   
       <% else %>
         <%= render 'nonefortodaysindex' %>
     <% end %>
-    <br>
+    <br><br>
   </div>
 </div> 
 
@@ -103,8 +103,8 @@
 
 
 <div class="section">
-  <span id="whatis" class="anchor"></span>
     <div class="container">
+      <span id="whatis" class="anchor"></span>
       <h1 class="sectionhead">Topics</h1>
 
       <div id="greetings" class="froala-view" class="float-center">
@@ -157,21 +157,21 @@
         </div>
       </div>
 
-<!-- End TOPICS -->     
-<!-- SEARCH box -->
-        <h1 class="sectionhead"> 
+<!-- End TOPICS -->
 
-                  <%= form_tag(posts_search_path, method: "get") do %>
-                    <%= text_field_tag(:query) %>
-                    <%= submit_tag("Search", class: "btn btn-primary btn-lg") %>
-                  <% end %>
-       
-        </h1>
+<!-- SEARCH box ******************** -->
+
+  <div class="section">
+    <div class="container">
+      <span id="screen" class="anchor"></span>
+
+        <h2 class="posts">
+          <%= render 'search' %>
+        </h2>
       <hr> 
     </div>
   </div>
 </div>
-<span id="screen" class="anchor"></span>
 <!-- End Search box -->
 
 <%= render 'layouts/footer' %> 
