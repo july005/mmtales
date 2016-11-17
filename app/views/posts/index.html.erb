@@ -99,7 +99,7 @@
             <div class="box panel panel-default">
               <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
               <div class="panel-body">
-                <p class="text-center lead"><%= link_to 'Dining', tags_show_path(id:16) %></p>
+                <p class="text-center leadtopics"><%= link_to 'Dining', tags_show_path(id:16) %></p>
               </div>
             </div>
 
@@ -107,7 +107,7 @@
               <div class="box panel panel-default">
                 <h1><%= link_to '<i class="fa fa-bed" aria-hidden="true"></i>'.html_safe, tags_show_path(id:15) %></h1>
                   <div class="panel-body">
-                    <p class="text-center lead"><%= link_to 'Resorts', tags_show_path(id:15) %></p>
+                    <p class="text-center leadtopics"><%= link_to 'Resorts', tags_show_path(id:15) %></p>
                   </div>
                 </div>
             <% end %>
@@ -115,28 +115,28 @@
             <div class="box panel panel-default">
               <h1><i class="fa fa-rocket" aria-hidden="true"></i></h1>
               <div class="panel-body">
-                <p class="text-center lead"><%= link_to 'Parks', tags_show_path(id:17) %></p>
+                <p class="text-center leadtopics"><%= link_to 'Parks', tags_show_path(id:17) %></p>
               </div>
             </div>
 
             <div class="box panel panel-default">
               <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
               <div class="panel-body">
-                <p class="text-center lead"><%= link_to 'Transport', posts_path %></p>
+                <p class="text-center leadtopics"><%= link_to 'Transport', posts_path %></p>
               </div>
             </div>
 
             <div class="box panel panel-default">
               <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
               <div class="panel-body">
-                <p class="text-center lead"><%= link_to 'All', tags_index_path %></p>
+                <p class="text-center leadtopics"><%= link_to 'All', tags_index_path %></p>
               </div>
             </div>
 
             <div class="box panel panel-default">
               <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
               <div class="panel-body">
-                <p class="text-center lead"><%= link_to 'Resorts', posts_path %></p>
+                <p class="text-center leadtopics"><%= link_to 'Resorts', posts_path %></p>
               </div>
             </div>
 
@@ -146,7 +146,7 @@
 <!-- End TOPICS -->     
 <!-- SEARCH box -->
       <span id="screen" class="anchor"></span>
-          <h1 class="sectionhead"> 
+        <h1 class="sectionhead"> 
 
                   <%= form_tag(posts_search_path, method: "get") do %>
                     <%= text_field_tag(:query) %>
@@ -154,7 +154,6 @@
                   <% end %>
        
         </h1>
-        <p>BUT I WANT THIS INLINE AND FOR SOME REASON BOOTS FORM CLASS: FORM INLINE MAKES SUBMIT TAG NOT WORK</p>
       <hr> 
     </div>
   </div>

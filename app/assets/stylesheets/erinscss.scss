@@ -167,6 +167,13 @@ p, ol, ul, td {
   font-weight: 200;
   line-height: 130%;
 }
+.leadtopics {
+  font-family: 'Delius Swash Caps', cursive;
+  margin-bottom: 50%;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 130%;
+}
 .welcome {
   font-family: 'Delius Swash Caps', cursive;
   margin-bottom: 21px;
@@ -322,4 +329,45 @@ cite {
 
 .box1 img {
   width: 100%;
+}
+
+
+/* -------------------------------------------------
+Responsive image size for post show page
+------------------------------------------------- */
+
+/* setup border-radius mixin */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+      border-radius: $radius;
+}
+
+  /* Level 2 flex layout - rows within article */
+.Row {
+  flex: 1 1 100%;
+  flex-flow: column;
+  min-height: 100px;
+}
+
+  /* Level 3 flex layout - individual items nested within rows */
+.Grid {
+  display: flex;
+  flex-flow: row;
+  img {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid $secondaryColor;
+    @include border-radius(5px);
+  }
+}
+
+.Grid--1ofX {
+  flex: 1;
+}
+
+  /* breakpoint to make responsive */
+@media all and (max-width: 600px) {
+  #main, .Grid {  flex-direction: column; }
 }
