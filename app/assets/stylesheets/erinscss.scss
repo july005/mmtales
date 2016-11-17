@@ -224,6 +224,16 @@ cite {
   border-radius: 0; 
 }
 
+.navbar-small  {
+  position: relative;
+  top: 0;
+  min-height: 12px;
+  margin-bottom: 0; 
+  width: 90%;
+  z-index: 999;
+  border-radius: 0; 
+}
+
 .navbar-default {
   position: fixed;
   color: black;
@@ -253,6 +263,13 @@ cite {
   color: #ECEBEB;
   letter-spacing: 1px;
   font-weight: 400 !important;
+}
+
+.navbar-brand .small {
+  font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
+  color: #ECEBEB;
+  letter-spacing: 1px;
+  font-weight: 100 !important;
 }
 
 .navbar-posts {
