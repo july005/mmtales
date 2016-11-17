@@ -3,26 +3,25 @@
 
 <%= render 'layouts/navbar' %> 
 <div class="container">
-  
-
+  <div class="jumbotron">
     <div class="Grid">
       <div class="Grid--1ofX">
         <%= image_tag @post.image.url(:xlarge), :class => "center-block" %> 
       </div>
      </div>
-
+    <hr>
     <h1 class="nobootstrap"><%= @post.title %></h1>
-     <h2 class="posts"><%= @post.subtitle %><br><br></h2>
+    <h2 class="posts"><%= @post.subtitle %><br><br></h2>
+    <hr>
     <div class="froala-view"><%= @post.body.html_safe %></div>
       <hr>
     <div class="row">
       <h3 class="postshow">
-        <strong>Topics:</strong> 
-         <%= render @post.tags %> 
-         <%= social_share_button_tag(@post.title) %> 
-       </h3>
+        <strong>Topics:</strong><%= render @post.tags %></h3>
+        <br> 
+        <%= social_share_button_tag(@post.title) %> 
     </div>
-
+  </div>
   
   <hr>
 

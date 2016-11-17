@@ -372,7 +372,7 @@ Responsive image size for post show page
   img {
     width: 100%;
     padding: 0px;
-    border: 1px solid;
+    border: 0px solid;
     @include border-radius(5px);
   }
 }
@@ -386,5 +386,7 @@ Responsive image size for post show page
   #main, .Grid {  flex-direction: column; }
 }
 
-
+.jumbotron{
+  background-color:transparent !important;
+}
 
