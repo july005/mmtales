@@ -11,7 +11,7 @@
       </div>
 
     <div class="jumbotron" >
-    <p>Why isn't img-responsive making the post image smaller when resize screen? Use this tutorial: http://www.benlcollins.com/rails/building-a-rails-app-for-images-using-amazon-s3-and-paperclip/</p>
+    
     <h1 class="nobootstrap"><%= @post.title %></h1>
     <h2 class="posts"><%= @post.subtitle %><br><br>
       
@@ -67,11 +67,6 @@
     <div class="section answers">
         <div class="container"><div class="container answers">
             <h1><%= social_share_button_tag(@post.title) %></h1>
-            <div class="row">
-                <p class="text-muted">Copyright &copy;monorailsandmickeytales 2016</p>
-                 <p>www.monorailsandmickeytales.com is not affiliated with, authorized or endorsed by, or in any way officially connected with The Walt Disney Company</p>
-                <hr class="small">
-            </div>
         </div>
     </div>
 </footer>

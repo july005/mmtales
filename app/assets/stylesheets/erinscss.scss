@@ -357,8 +357,8 @@ Responsive image size for post show page
   flex-flow: row;
   img {
     width: 100%;
-    padding: 10px;
-    border: 2px solid;
+    padding: 0px;
+    border: 1px solid;
     @include border-radius(5px);
   }
 }
@@ -371,3 +371,6 @@ Responsive image size for post show page
 @media all and (max-width: 600px) {
   #main, .Grid {  flex-direction: column; }
 }
+
+
+

@@ -29,4 +29,14 @@
 @import url('https://fonts.googleapis.com/css?family=Lekton');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 
+$size: 29px;
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+    margin: auto;
+  }
+}
 
