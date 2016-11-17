@@ -227,11 +227,14 @@ cite {
 .navbar-small  {
   position: relative;
   top: 0;
-  min-height:20px;
   margin-bottom: 0; 
-  width: 90%;
+  width: 40%;
   z-index: 999;
   border-radius: 0; 
+  font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
+  color: #ECEBEB;
+  letter-spacing: 1px;
+  font-weight: 100 !important;
 }
 
 .navbar-default {
@@ -263,13 +266,6 @@ cite {
   color: #ECEBEB;
   letter-spacing: 1px;
   font-weight: 400 !important;
-}
-
-.navbar-brand .navbar-small {
-  font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
-  color: #ECEBEB;
-  letter-spacing: 1px;
-  font-weight: 100 !important;
 }
 
 .navbar-posts {
