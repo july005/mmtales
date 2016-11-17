@@ -3,51 +3,37 @@
 
 <%= render 'layouts/navbar' %> 
 <div class="container">
-  <div class="jumbotron">
+  
 
-      <div class="Grid">
-        <div class="Grid--1ofX">
-          <%= image_tag @post.image.url(:xlarge), :class => "center-block" %> 
-        </div>
+    <div class="Grid">
+      <div class="Grid--1ofX">
+        <%= image_tag @post.image.url(:xlarge), :class => "center-block" %> 
       </div>
+     </div>
 
-    <div class="jumbotron" >
-    
     <h1 class="nobootstrap"><%= @post.title %></h1>
-    <h2 class="posts"><%= @post.subtitle %><br><br>
-      
-    </h2>
+     <h2 class="posts"><%= @post.subtitle %><br><br></h2>
     <div class="froala-view"><%= @post.body.html_safe %></div>
-    <hr>
-
+      <hr>
     <div class="row">
       <h3 class="postshow">
         <strong>Topics:</strong> 
-        <%= render @post.tags %> 
-        <%= social_share_button_tag(@post.title) %> 
-      </h3>
+         <%= render @post.tags %> 
+         <%= social_share_button_tag(@post.title) %> 
+       </h3>
     </div>
-    <hr>
+
+  
+  <hr>
 
   <!-- Recent posts -->
-
-    <h2 class="posts">Read other recent posts:</h2>
-    <div id="topics" class="transitions-enabled">   
-      <% @readmore_posts.each do |post| %>
-        <div class="box1 panel panel-default">
-          <%= link_to image_tag(post.image.url(:medium)), post %>
-          <div class="panel-body">
-            <p><%= link_to post.title, post %></p>
-          </div>
-        </div>
-      <% end %>
-    </div>
+    <%= render 'otherrecent' %>
     <hr>
     <%= link_to 'Back', posts_path, class: 'btn btn-info btn-lg' %>
     <hr>
   <!-- Comments -->   
     
-    <%= render 'disqus' %><br>
+    <%= render 'disqus' %>
     
 
   <!-- Code for related posts would go here -->
@@ -64,13 +50,7 @@
   </div>
 </div>
 
-<footer>
-    <div class="section answers">
-        <div class="container"><div class="container answers">
-            <h1><%= social_share_button_tag(@post.title) %></h1>
-        </div>
-    </div>
-</footer>
+
 
 
 

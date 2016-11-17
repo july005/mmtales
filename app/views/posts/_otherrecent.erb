@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="col-md-12">
+
+            <% if @recent_posts.present? %>
+                
+                <h2 class="posts">Read other recent posts:</h1><br>
+                
+                <div id="topics" class="topics transitions-enabled">
+
+                    <!-- loops through all @recent_posts -->
+
+                    <div class="row">
+                        <% @recent_posts.each do |post| %>
+                            <div class="box1 panel panel-default">
+                                <%= link_to image_tag(post.image.url(:medium)), post %>
+                                <div class="panel-body">
+                                    <p class="recentpost"><%= link_to post.title, post %></p>
+                                </div>
+                            </div>
+                        <% end %>
+                    </div>
+                <br>
+
+            <% end %>
+
+        </div>
+        
+    </div>
+</div>
