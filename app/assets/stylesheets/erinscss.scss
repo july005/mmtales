@@ -358,7 +358,7 @@ Responsive image size for post show page
   img {
     width: 100%;
     padding: 10px;
-    border: 2px solid $secondaryColor;
+    border: 2px solid;
     @include border-radius(5px);
   }
 }
