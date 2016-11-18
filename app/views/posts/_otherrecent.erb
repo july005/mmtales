@@ -3,14 +3,14 @@
 
             <% if @recent_posts.present? %>
                 
-                <h2 class="posts">Read other recent posts:</h1><br>
+                <h2 class="posts">Read next:</h1><br>
                 
                 <div id="topics" class="topics transitions-enabled">
 
                     <!-- loops through all @recent_posts -->
 
                     <div class="row">
-                        <% @recent_posts.each do |post| %>
+                        <% @readmore_posts.each do |post| %>
                             <div class="box1 panel panel-default">
                                 <%= link_to image_tag(post.image.url(:medium)), post %>
                                 <div class="panel-body">
