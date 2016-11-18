@@ -20,9 +20,9 @@ class Post < ActiveRecord::Base
     :styles => {
       :thumb => "120x120#",
       :small  => "200x200>",
-      :medium => "300x300>",
+      :medium => "300x210#",
       :large => "600x600>",
-      :xlarge => "800x800>" },
+      :xlarge => "800x450#" },
  		default_url: "/images/missing.png",
  		s3_region: ENV["aws_region"]
  		
