@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'tags/show--skip-template-engine'
 
   get 'posts/search', to: "posts#search"
+  
+  get 'posts/all', to: "posts#all"
 
   devise_for :users
   resources :posts

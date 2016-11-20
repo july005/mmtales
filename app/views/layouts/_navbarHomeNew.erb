@@ -12,7 +12,6 @@
         <a class="navbar-small" href="#home"><p class="navbar-small">monorails & mickey tales</p></a>
       </div> 
       <div class="mobileNavbig">
-        <%= link_to image_tag("fairygirledit.png", class: "rotate", height: "40px") %>
         <a class="navbar-brand" href="#home">monorails & mickey tales</a>
       </div>
     </div>
@@ -20,8 +19,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#contact">Ask a Question</a></li>
-        <li><a href="#useit">Read Answers</a></li>
+        <li><a href="#contact">Ask</a></li>
+        <li><a href="#useit">Read</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topics <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -38,7 +37,9 @@
         </li>
       </ul>
       
-          <%= form_tag(posts_search_path, method: "get", class: "navbar-form navbar-right") do %>
+        
+        <%= form_tag(posts_search_path, method: "get", class: "navbar-form navbar-right") do %>
+            <%= link_to image_tag("fairygirledit.png", class: "rotate", height: "40px") %>
             <div class="input-group add-on">
               <%= text_field_tag(:query, nil, placeholder: 'Search', class: "form-control input-lg") %>
                 <div class="input-group-btn">

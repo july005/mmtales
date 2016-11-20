@@ -1,66 +1,27 @@
 <div class="container">
-    <div class="col-md-12">
-
+    <br><br>
             <% if @recent_posts.present? %>
-                
-                <h1 class="sectionhead">Recent Answers</h1><br>
-                
-                <div id="topics" class="topics transitions-enabled">
-                    
-                    <!-- loops through @prevone_posts, then @prevtwo_posts, then @prevthree_posts, etc. 
-
-                    <div class="row">                        
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                            <% @prevone_posts.each do |post| %>
-                                <div class="box1 panel panel-default">
-                                    <%= link_to image_tag(post.image.url(:medium)), post %>
-                                    <div class="panel-body">
-                                        <p class="recentpost"><%= link_to post.title, post %></p>
-                                    </div>
-                                </div>
-                            <% end %>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                            <% @prevtwo_posts.each do |post| %>
-                                <div class="box1 panel panel-default">
-                                    <%= link_to image_tag(post.image.url(:medium)), post %>
-                                    <div class="panel-body">
-                                        <p class="recentpost"><%= link_to post.title, post %></p>
-                                    </div>
-                                </div>
-                            <% end %>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
-                            <% @prevthree_posts.each do |post| %>
-                                <div class="box1 panel panel-default">
-                                    <%= link_to image_tag(post.image.url(:medium)), post %>
-                                    <div class="panel-body">
-                                        <p class="recentpost"><%= link_to post.title, post %></p>
-                                    </div>
-                                </div>
-                            <% end %>
-                        </div>
-                    </div>
-
-                    -->
 
                     <!-- loops through all @recent_posts -->
-
-                    <div class="row">
+                   
                         <% @recent_posts.each do |post| %>
-                            <div class="box1 panel panel-default">
-                                <%= link_to image_tag(post.image.url(:medium)), post %>
-                                <div class="panel-body">
-                                    <p class="recentpost"><%= link_to post.title, post %></p>
+                             <div class="row">
+                                <div class="col-md-4">
+                                    <div class="Grid">
+                                        <div class="Grid--1ofX">
+                                            <%= link_to image_tag(post.image.url(:xlarge)), post %>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2 class="postsindex"><%= link_to post.title, post %></h2>
+                                    <p class="recentpost"><%= link_to truncate(post.subtitle, length:250), post %></p>
+                                    <hr>
+                                    <p><span class="highlight"><%= render post.tags %></span></p> 
                                 </div>
                             </div>
+                            <hr>
                         <% end %>
-                    </div>
                 <br>
-
-            <% end %>
-
-        </div>
-        
-    </div>
+            <% end %>        
 </div>
