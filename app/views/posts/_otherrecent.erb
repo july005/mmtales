@@ -3,7 +3,7 @@
 
             <% if @recent_posts.present? %>
                 
-                <h2 class="posts">Read next:</h1><br>
+                <h2 class="posts"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "25x25") %> Read next:</h1><br>
                 
                 <div id="topics" class="topics transitions-enabled">
 
@@ -14,7 +14,7 @@
                             <div class="box1 panel panel-default">
                                 <%= link_to image_tag(post.image.url(:medium)), post %>
                                 <div class="panel-body">
-                                    <p class="recentpost"><%= link_to post.title, post %></p>
+                                    <p class="recentpost"><%= link_to truncate(post.title, length:35, separator:' ' ), post %></p>
                                 </div>
                             </div>
                         <% end %>

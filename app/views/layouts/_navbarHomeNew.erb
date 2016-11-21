@@ -9,10 +9,10 @@
         <span class="icon-bar"></span>
       </button>
       <div class="mobileNavsmall">
-        <a class="navbar-small" href="#home"><p class="navbar-small">monorails & mickey tales</p></a>
+        <a class="navbar-small"><p class="navbar-small">monorails & mickey tales</p></a>
       </div> 
       <div class="mobileNavbig">
-        <a class="navbar-brand" href="#home">monorails & mickey tales</a>
+        <a class="navbar-brand">monorails & mickey tales</a>
       </div>
     </div>
 
@@ -26,20 +26,22 @@
           <ul class="dropdown-menu" role="menu">
             <li><a href="#whatis">All</a></li>
             <li class="divider"></li>
-            <li><a href="#">Dining</a></li>
+            <li><a href="#">Food</a></li>
             <li class="divider"></li>
             <li><a href="#">Resorts</a></li>
             <li class="divider"></li>
-            <li><a href="#">Parks</a></li>
+            <li><a href="#">Theme Parks</a></li>
             <li class="divider"></li>
             <li><a href="#">Transport</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Shopping</a></li>
           </ul>
         </li>
       </ul>
       
         
         <%= form_tag(posts_search_path, method: "get", class: "navbar-form navbar-right") do %>
-            <%= link_to image_tag("fairygirledit.png", class: "rotate", height: "40px") %>
+            <%= link_to image_tag("fairygirledit.png", height: "30px") %>
             <div class="input-group add-on">
               <%= text_field_tag(:query, nil, placeholder: 'Search', class: "form-control input-lg") %>
                 <div class="input-group-btn">

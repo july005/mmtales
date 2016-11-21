@@ -124,7 +124,7 @@ h2 {
 }
 .postsindex {
   text-align: left;
-  color: black;
+  font-color: black;
   font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
 }
 
@@ -189,7 +189,6 @@ p, ol, ul, td {
 
 span.highlight {
     background-color: #cdc1c5;
-    
 }
 
 
@@ -417,4 +416,26 @@ Search form
  box-shadow:none;
  -webkit-box-shadow:none; 
  border-color:#cccccc; 
+}
+
+/* -------------------------------------------------
+Bootstrap button overrides
+------------------------------------------------- */
+
+.btn-secondary {
+    clear:both;
+    background-color: pink;
+    border-color: black;
+    color: white;
+}
+
+.btn-category {
+    clear:both;
+    background-color: #caeccf;
+    color: white;
+}
+
+.rotate {
+  height: auto;
+  margin-bottom: 10px
 }

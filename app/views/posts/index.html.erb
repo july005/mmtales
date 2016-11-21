@@ -19,7 +19,7 @@
           <br>
           
           <div class="mobileNavbig">
-            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "60x60") %> 
+            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
             Hi, there! Need help planning a Disney trip?</h1>
             <p class="welcome" style="margin-top:0">
               <br><strong>Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check back later today for your answers!
@@ -28,7 +28,7 @@
           </div> 
 
           <div class="mobileNavsmall">
-            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "60x60") %> 
+            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
             <br>Hi, there! Need help planning a Disney trip?</h1>
             <p class="welcome" style="margin-top:0">
               <br><strong>Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check back later today for your answers!
@@ -37,7 +37,7 @@
           </div>
 
           <%= render 'contacts/new' %> 
-          <br><br><br><br>        
+          <br>       
         </div>
     </div>
   </div>
@@ -46,10 +46,11 @@
 
 <!-- Today's Answers -->
 
-<div class="section answers">
+<div class="section">
   <div class="container">
     <br>
     <span id="useit" class="anchor"></span>
+    <h1 class="sectionhead"><%= link_to image_tag("fairygirledit.png", height: "40px") %> Answers <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
     <% if @todays_posts.exists? %>
         <%= render 'todaysindex' %>   
       <% else %>
@@ -69,7 +70,7 @@
 <div class="section">
     <div class="container">
       <span id="whatis" class="anchor"></span>
-      <h1 class="sectionhead">Topics</h1>
+      <h1 class="sectionhead"><%= link_to image_tag("fairygirledit.png", height: "40px") %> Topics <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
 
       <div id="greetings" class="froala-view" class="float-center">
         <div id="posts" class="transitions-enabled"> 
@@ -77,7 +78,7 @@
             <div class="box panel panel-default">
               <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
               <div class="panel-body">
-                <p class="text-center leadtopics"><%= link_to 'Dining', tags_show_path(id:16) %></p>
+                <p class="text-center leadtopics"><%= link_to 'Food', tags_show_path(id:16) %></p>
               </div>
             </div>
 
@@ -93,33 +94,34 @@
             <div class="box panel panel-default">
               <h1><i class="fa fa-rocket" aria-hidden="true"></i></h1>
               <div class="panel-body">
-                <p class="text-center leadtopics"><%= link_to 'Parks', tags_show_path(id:17) %></p>
+                <p class="text-center leadtopics"><%= link_to 'Theme Parks', tags_show_path(id:17) %></p>
               </div>
             </div>
 
             <div class="box panel panel-default">
-              <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
+              <h1><i class="fa fa-bus" aria-hidden="true"></i></h1>
               <div class="panel-body">
                 <p class="text-center leadtopics"><%= link_to 'Transport', posts_path %></p>
               </div>
             </div>
 
             <div class="box panel panel-default">
-              <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
+              <h1><i class="fa fa-gift" aria-hidden="true"></i></h1>
               <div class="panel-body">
-                <p class="text-center leadtopics"><%= link_to 'All', tags_index_path %></p>
+                <p class="text-center leadtopics"><%= link_to 'Shopping', tags_index_path %></p>
               </div>
             </div>
 
             <div class="box panel panel-default">
-              <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
+              <h1><i class="fa fa-podcast" aria-hidden="true"></i></h1>
               <div class="panel-body">
-                <p class="text-center leadtopics"><%= link_to 'Resorts', posts_path %></p>
+                <p class="text-center leadtopics"><%= link_to 'News', posts_path %></p>
               </div>
             </div>
 
         </div>
       </div>
+      <br><br>
 
 <!-- End TOPICS -->
 

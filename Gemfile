@@ -28,6 +28,7 @@ gem 'mail_form', '~> 1.5', '>= 1.5.1'
 gem 'meta-tags'
 gem 'social-share-button'
 gem 'pg_search'
+gem 'font-awesome-rails', '~> 4.7'
 
   group :development, :test do
     gem 'better_errors'
