@@ -12,6 +12,7 @@
  *
  *= require froala_editor.min.css
  *= require froala_style.min.css
+ *= require plugins/colors.min.css
  *= require font-awesome
  *= require 'masonry/transitions'
  *= require erinscss.scss 
@@ -28,6 +29,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Lekton');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Vibur');
 
 $size: 29px;
 

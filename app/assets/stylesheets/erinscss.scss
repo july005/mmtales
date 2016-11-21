@@ -81,7 +81,13 @@ body {
   clear: both;
 }
 
-/* END CONTACT FORM */
+/* FROALA */
+
+.froalaquestion {    
+    font-family: 'Special Elite', Helvetica, Arial, sans-serif;
+    color: red;
+  }
+
 
 /* SEARCH FORM */
 
@@ -126,6 +132,15 @@ h2 {
   text-align: left;
   font-color: black;
   font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
+}
+
+.heart {
+  font-family: 'Vibur';
+  color: red;
+}
+.signature {
+  font-family: 'Vibur';
+  color: #76c4ae;
 }
 
 h3 {
@@ -179,6 +194,7 @@ p, ol, ul, td {
   font-weight: 200;
   line-height: 130%;
 }
+
 .welcome {
   font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
   margin-bottom: 21px;

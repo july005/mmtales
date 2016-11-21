@@ -22,7 +22,7 @@
             <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
             Hi, there! Need help planning a Disney trip?</h1>
             <p class="welcome" style="margin-top:0">
-              <br><strong>Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check back later today for your answers!
+              <br><strong>Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check below later today for your answers!
             </p>
             <br>
           </div> 
@@ -50,13 +50,13 @@
   <div class="container">
     <br>
     <span id="useit" class="anchor"></span>
-    <h1 class="sectionhead"><%= link_to image_tag("fairygirledit.png", height: "40px") %> Answers <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
+    <h1 class="sectionhead">Answers <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
     <% if @todays_posts.exists? %>
         <%= render 'todaysindex' %>   
       <% else %>
         <%= render 'nonefortodaysindex' %>
     <% end %>
-    <br><br>
+    
   </div>
 </div> 
 
@@ -70,7 +70,7 @@
 <div class="section">
     <div class="container">
       <span id="whatis" class="anchor"></span>
-      <h1 class="sectionhead"><%= link_to image_tag("fairygirledit.png", height: "40px") %> Topics <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
+      <h1 class="sectionhead">Topics <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
 
       <div id="greetings" class="froala-view" class="float-center">
         <div id="posts" class="transitions-enabled"> 
