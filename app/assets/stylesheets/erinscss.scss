@@ -173,13 +173,6 @@ p, ol, ul, td {
   font-size: 3.0vh;
   color: red;
 }
-
-.recentpost {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-}
-
 .lead {
   font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
   margin-bottom: 21px;
@@ -194,7 +187,14 @@ p, ol, ul, td {
   font-weight: 200;
   line-height: 130%;
 }
-
+.recentpost {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+.typewriter {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .welcome {
   font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
   margin-bottom: 21px;
@@ -202,9 +202,11 @@ p, ol, ul, td {
   font-weight: 200;
   line-height: 1.4;
 }
-
 span.highlight {
     background-color: #cdc1c5;
+}
+.indent {
+  padding-left: 15px;
 }
 
 
@@ -372,6 +374,10 @@ cite {
   width: 100%;
 }
 
+.tags {
+  float: right;
+  padding-right: 10 px;
+}
 
 /* -------------------------------------------------
 Responsive image size for post show page
@@ -447,7 +453,7 @@ Bootstrap button overrides
 
 .btn-category {
     clear:both;
-    background-color: #caeccf;
+    background-color: #bee9e4;
     color: white;
 }
 

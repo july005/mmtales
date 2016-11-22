@@ -9,9 +9,9 @@
 		  <% @posts.each do |post| %>
 		    <div class="box1 panel panel-default">
 		    	<%= link_to image_tag(post.image.url(:medium)), post%>
-		      <div class="panel-body">
-		       <p class="recentpost"><%= link_to post.title, post %></p>
-		      </div>
+					<div class="panel-body">
+            <p class="recentpost"><%= link_to truncate(post.title, length:35, separator:' ' ), post %></p>
+          </div>
 		    </div>
 		  <% end %>
 

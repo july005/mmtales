@@ -53,9 +53,9 @@
         <%= form_tag(posts_search_path, method: "get", class: "navbar-form navbar-right") do %>
             <%= link_to image_tag("fairygirledit.png", height: "30px") %>
             <div class="input-group add-on">
-              <%= text_field_tag(:query, nil, placeholder: 'Search', class: "form-control input-lg") %>
+              <%= text_field_tag(:query, nil, placeholder: 'Search', class: "form-control") %>
                 <div class="input-group-btn">
-                  <%= button_tag(type: "submit", class: "btn btn-primary btn-lg") do %>
+                  <%= button_tag(type: "submit", class: "btn btn-primary") do %>
                     <i class="fa fa-search" aria-hidden="true"></i>
                   <% end %>
                 </div>

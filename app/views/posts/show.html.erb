@@ -22,12 +22,11 @@
     <div class="row">
       <h3 class="postshow">
         <strong>Topics: </strong><%= render @post.tags %></h3>
-        <br> 
-        <%= social_share_button_tag(@post.title) %> 
+        <hr>
+        <div class="indent"><%= social_share_button_tag(@post.title) %> </div>
+        <hr>
     </div>
   </div>
-  
-  <hr>
 
   <!-- Recent posts -->
     <%= render 'otherrecent' %>
