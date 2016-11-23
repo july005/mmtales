@@ -1,0 +1,27 @@
+<div class="container">
+    <br><br>
+            <% if @allbut_posts.present? %>
+
+                    <!-- loops through all @recent_posts -->
+                   
+                        <% @allbut_posts.each do |post| %>
+                             <div class="row">
+                                <div class="col-md-4">
+                                    <div class="Grid">
+                                        <div class="Grid--1ofX">
+                                            <%= link_to image_tag(post.image.url(:xlarge)), post %>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2 class="postsindex"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "25x25") %> &nbsp;<%= link_to post.title, post %></h2>
+                                    <p class="typewriter"><%= link_to truncate(post.subtitle, length:250), post %> <%= link_to 'Read More', post, class: 'btn btn-secondary btn-xs' %></p>
+                                    
+                                    <%= render post.tags %>
+                                </div>
+                            </div>
+                            <hr><hr>
+                        <% end %>
+                <br>
+            <% end %>        
+</div>

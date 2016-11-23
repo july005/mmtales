@@ -159,6 +159,10 @@ h3 {
   margin-left: 0.5em;
 }
 
+.topicbutton {
+  font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
+}
+
 p, ol, ul, td {
   margin: 0 0 10.5px;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -353,11 +357,17 @@ cite {
   -webkit-border-radius: 50px;
   border-radius: 50px;
   margin: 3%;
+  border-color: transparent;
   /*width: 35vmin;*/
 }
 .box img {
   width: 100%;
 }
+.categories {
+  padding-bottom: 10px;
+  margin: 3%;
+}
+
 
 /* TRANSITIONS-ENABLED RECENT POSTS PANEL */
 
@@ -459,5 +469,11 @@ Bootstrap button overrides
 
 .rotate {
   height: auto;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+}
+
+.btn-xl {
+    padding: none;
+    font-size: 20px;
+    border-radius: 10px;
 }

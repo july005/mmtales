@@ -50,17 +50,21 @@
   <div class="container">
     <br>
     <span id="useit" class="anchor"></span>
-    <h1 class="sectionhead">Answers <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
     <% if @todays_posts.exists? %>
-        <%= render 'todaysindex' %>   
+        <h1 class="sectionhead">Today's Answer <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
+        <%= render 'todaysanswer' %>
+        <br>
+        <h1 class="sectionhead">Read More <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1><hr>
+        <%= render 'allbuttoday' %>   
       <% else %>
+        <h1 class="sectionhead">Answers <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
         <%= render 'nonefortodaysindex' %>
     <% end %>
     
   </div>
 </div> 
 
-<hr>
+
 
 <!-- End Today's Answers -->
 
@@ -71,57 +75,42 @@
     <div class="container">
       <span id="whatis" class="anchor"></span>
       <h1 class="sectionhead">Topics <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
-
-      <div id="greetings" class="froala-view" class="float-center">
+      <hr> 
+      <div class="float-center ">
         <div id="posts" class="transitions-enabled"> 
-            
-            <div class="box panel panel-default">
-              <h1><i class="fa fa-cutlery" aria-hidden="true"></i></h1>
-              <div class="panel-body">
-                <p class="text-center leadtopics"><%= link_to 'Food', tags_show_path(id:16) %></p>
-              </div>
-            </div>
 
-            <%= link_to tags_show_path(id:15) do %>
-              <div class="box panel panel-default">
-                <h1><%= link_to '<i class="fa fa-bed" aria-hidden="true"></i>'.html_safe, tags_show_path(id:15) %></h1>
-                  <div class="panel-body">
-                    <p class="text-center leadtopics"><%= link_to 'Resorts', tags_show_path(id:15) %></p>
-                  </div>
-                </div>
-            <% end %>
-
-            <div class="box panel panel-default">
-              <h1><i class="fa fa-rocket" aria-hidden="true"></i></h1>
-              <div class="panel-body">
-                <p class="text-center leadtopics"><%= link_to 'Theme Parks', tags_show_path(id:17) %></p>
-              </div>
+            <div class="box panel panel-default"> 
+              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-cutlery"></i> <br><br>Food'.html_safe, tags_show_path(id:16), class: 'btn btn-lg btn-block outline' %></h3>
             </div>
 
             <div class="box panel panel-default">
-              <h1><i class="fa fa-bus" aria-hidden="true"></i></h1>
-              <div class="panel-body">
-                <p class="text-center leadtopics"><%= link_to 'Transport', posts_path %></p>
-              </div>
+              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-bed"></i> <br><br>Resorts'.html_safe, tags_show_path(id:15), class: 'btn btn-lg btn-block outline' %></h3>
             </div>
 
             <div class="box panel panel-default">
-              <h1><i class="fa fa-gift" aria-hidden="true"></i></h1>
-              <div class="panel-body">
-                <p class="text-center leadtopics"><%= link_to 'Shopping', tags_index_path %></p>
-              </div>
+              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-rocket"></i> <br><br>Theme Parks'.html_safe, tags_show_path(id:17), class: 'btn btn-lg btn-block outline' %></h3>
             </div>
 
             <div class="box panel panel-default">
-              <h1><i class="fa fa-podcast" aria-hidden="true"></i></h1>
-              <div class="panel-body">
-                <p class="text-center leadtopics"><%= link_to 'News', posts_path %></p>
-              </div>
+              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-bus"></i> <br><br>Transport'.html_safe, tags_show_path(id:15), class: 'btn btn-lg btn-block outline' %></h3>
+            </div>
+
+            <div class="box panel panel-default">
+              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-gift"></i> <br><br>Shopping'.html_safe, tags_show_path(id:15), class: 'btn btn-lg btn-block outline' %></h3>
+            </div>
+
+            <div class="box panel panel-default">
+              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-podcast"></i> <br><br>News'.html_safe, tags_show_path(id:15), class: 'btn btn-lg btn-block outline' %></h3>
             </div>
 
         </div>
+          
+        </div>
       </div>
+
       <br><br>
+    </div>
+  </div>
 
 <!-- End TOPICS -->
 
@@ -140,7 +129,7 @@
 </div>
 <!-- End Search box -->
 
-<%= render 'layouts/footer' %> 
+<div><%= render 'layouts/footer' %></div>  
 
 <script>
 $(document).on('click','.navbar-collapse.in',function(e) {

@@ -10,6 +10,7 @@ class PostsController < ApplicationController
     @recent_posts = Post.all.order("created_at desc").limit(6)
     @readmore_posts = Post.all.order("created_at desc").limit(4)
     @previous_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day)
+    @allbut_posts = Post.all.order("created_at desc").limit(7).offset(1)
 
     @prevone_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day).limit(1)
     @prevtwo_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day).limit(1).offset(1)
@@ -48,6 +49,7 @@ class PostsController < ApplicationController
     @recent_posts = Post.all.order("created_at desc").limit(5)
     @previous_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day)
     @readmore_posts = Post.all.where.not(id: @post.id).order("created_at desc").limit(3)
+    @allbut_posts = Post.all.order("created_at desc").limit(7).offset(1)
 
   end
 
