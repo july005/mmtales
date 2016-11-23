@@ -1,8 +1,45 @@
-<h1 class="page_title">Empty text here</h1>
+<html lang="en">
+<p id="notice"><%= notice %></p>
+<body id="home">
 
-<div class="skinny_wrapper wrapper_padding">
-	<h1>Thanks for getting in touch!<h1>
-	<p>I'll post an answer to your question on the site within a day.</p>
-	<h1><%= link_to "Go back", root_path, class: 'btn btn-info btn-lg' %>  <h1>
-</div>
+<!-- Preloader -->
+<div id="preloader">
+  <div id="status"></div>
+
+<%= render 'layouts/navbarHomeNew' %> 
+
+<!-- Contact Me -->
+<div class="section">
+  <span id="contact" class="anchor"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center abcen3">
+          <br>
+          <!-- <h2 class="h1_home wow fadeIn"> Ask      <i class="fa fa-magic"></i></h2> --> 
+          <br>
+          
+          <div class="mobileNavbig">
+            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
+            Thanks for getting in touch!</h1>
+            <p class="welcome" style="margin-top:0">
+              <br><strong>I'll post an answer to your question on the site within a day. Check back soon!
+            </p>
+            <h1><%= link_to "Go back", root_path, class: 'btn btn-info btn-lg' %>  <h1>
+            <br>
+          </div> 
+
+          <div class="mobileNavsmall">
+            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
+            <br>Hi, there! Need help planning a Disney trip?</h1>
+            <p class="welcome" style="margin-top:0">
+              <br><strong>I'll post an answer to your question on the site within a day. Check back soon!
+            </p>
+            <h1><%= link_to "Go back", root_path, class: 'btn btn-info btn-lg' %>  <h1>
+            <br>
+          </div>
+
+          <br>       
+        </div>
+    </div>
+  </div>
 
