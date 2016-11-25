@@ -8,10 +8,9 @@ class PostsController < ApplicationController
     @contact = Contact.new
     @todays_posts = Post.all.where("created_at > ? AND created_at < ?", Time.now.beginning_of_day, Time.now.end_of_day).limit(5)
     @recent_posts = Post.all.order("created_at desc").limit(6)
-    @readmore_posts = Post.all.order("created_at desc").limit(4)
     @previous_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day)
     @allbut_posts = Post.all.order("created_at desc").limit(7).offset(1)
-
+ 
     @prevone_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day).limit(1)
     @prevtwo_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day).limit(1).offset(1)
     @prevthree_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day).limit(1).offset(2)

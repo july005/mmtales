@@ -26,17 +26,18 @@
         <div class="indent"><%= social_share_button_tag(@post.title) %> </div>
         <hr>
     </div>
-  </div>
+  <span id="comments" class="anchor"></span>
+    <%= render 'disqus' %>  </div>
+
+  <!-- Comments -->   
+    
 
   <!-- Recent posts -->
     <%= render 'otherrecent' %>
     <hr>
     <%= link_to 'Back', posts_path, class: 'btn btn-info btn-lg' %>
     <hr>
-  <!-- Comments -->   
-    
-    <span id="comments" class="anchor"></span>
-    <%= render 'disqus' %>
+
     
 
   <!-- Code for related posts would go here -->
