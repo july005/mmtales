@@ -1,21 +1,22 @@
   <br>
   <div class="Grid">
     <div class="Grid--1ofX">        
-      <%= image_tag @todays_posts.last.image.url(:xlarge), :class => "center-block" %> 
+      <%= image_tag @recent_posts.last.image.url(:xlarge), :class => "center-block" %> 
     </div>
   </div>
   <h2 class="posts">
-    <%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "50x50") %> <%= @todays_posts.last.title %>
+    <%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "50x50") %> <%= @recent_posts.last.title %>
   </h2>
   <div class="froala-view">
-    <%= @todays_posts.last.body.html_safe %>
+    <%= @recent_posts.last.body.html_safe %>
   </div>
   <h2 class="heart"><i class="fa fa-heart" aria-hidden="true"></i>,<h2> 
   <h2 class="signature">monorails & mickey tales <%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "50x50") %></h2>
 
   <div class="row sectionhead section answers">
-    <div class="text-center"><%= social_share_button_tag(@todays_posts.last.title) %></div>
+    <div class="text-center"><%= social_share_button_tag(@recent_posts.last.title) %></div>
   </div>
+ 
   <hr><hr>
 
 

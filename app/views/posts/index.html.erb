@@ -50,15 +50,12 @@
   <div class="container">
     <br>
     <span id="useit" class="anchor"></span>
-    <% if @todays_posts.exists? %>
+    <% if @recent_posts.exists? %>
         <h1 class="sectionhead">Today's Answer <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
         <%= render 'todaysanswer' %>
         <br>
         <h1 class="sectionhead">Read More <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1><hr>
         <%= render 'allbuttoday' %>   
-      <% else %>
-        <h1 class="sectionhead">Answers <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
-        <%= render 'nonefortodaysindex' %>
     <% end %>
     
   </div>
