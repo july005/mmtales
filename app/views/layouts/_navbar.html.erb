@@ -28,14 +28,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to 'Ask', root_path(:anchor => 'contact') %></li>
-        <li><%= link_to "Read", root_path(:anchor => 'useit'), class: "menuItem" %></li>
+        <li><%= link_to 'Ask', root_path(:anchor => 'ask') %></li>
+        <li><%= link_to "Read", root_path(:anchor => 'read'), class: "menuItem" %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Topics <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><%= link_to "All", root_path(:anchor => 'whatis') %></li>
+            <li><%= link_to "All", root_path(:anchor => 'topics') %></li>
             <li class="divider"></li>
-            <li><a href="#">Food</a></li>
+            <%= link_to '<i class="fa fa-cutlery"></i> <br><br>Food'.html_safe, tags_show_path(id:4) %>
             <li class="divider"></li>
             <li><a href="#">Resorts</a></li>
             <li class="divider"></li>
