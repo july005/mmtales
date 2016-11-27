@@ -42,4 +42,8 @@ class Post < ActiveRecord::Base
     post_array.uniq.delete(self)
   end
 
+  def to_param
+  	"#{id} #{title}".parameterize
+  end
+
 end
