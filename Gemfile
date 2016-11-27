@@ -29,7 +29,7 @@ gem 'meta-tags'
 gem 'social-share-button'
 gem 'pg_search'
 gem 'font-awesome-rails', '~> 4.7'
-gem 'bootstrap', '~> 4.0.0.alpha5'
+
 
   group :development, :test do
     gem 'better_errors'
