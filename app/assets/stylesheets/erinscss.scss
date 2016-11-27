@@ -473,6 +473,14 @@ Bootstrap button overrides
     color: white;
 }
 
+.btn-back {
+    clear:both;
+    background-color: #ffe3cc;
+    box-shadow: 0 3px 0 0 #ffb980;
+    font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
+
+}
+
 .rotate {
   height: auto;
   margin-bottom: 10px;
@@ -482,4 +490,11 @@ Bootstrap button overrides
     padding: none;
     font-size: 20px;
     border-radius: 10px;
+}
+
+.center {
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

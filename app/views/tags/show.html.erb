@@ -1,7 +1,7 @@
 <%= render 'layouts/navbar' %> 
 <div class="container">
   <div class="jumbotron">
-    <h1 class="nobootstrap">Topic: <strong><%= @tag.name %> </strong></h1>
+    <h1 class="nobootstrap">Answer topic: <strong><%= @tag.name %> </strong></h1>
 		<hr>
 
 		<div id="topics" class="transitions-enabled"> 
@@ -17,7 +17,8 @@
 
 		</div>
 		
-		<%= link_to 'Back', posts_path, class: "btn btn-success btn-lg" %>
+		<div class="center"><%= link_to 'Back', posts_path, class: "btn btn-back btn-lg" %></div>
 	</div>
-</div>
 <%= render 'layouts/footer' %> 
+</div>
+
