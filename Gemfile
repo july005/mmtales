@@ -30,7 +30,7 @@ gem 'social-share-button'
 gem 'pg_search'
 gem 'font-awesome-rails', '~> 4.7'
 gem 'friendly_id', '~> 5.1.0'
-gem 'instafeed'
+
 
 
   group :development, :test do
