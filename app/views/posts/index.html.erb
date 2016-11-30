@@ -10,6 +10,69 @@
 
 <!-- Contact Me -->
 <div class="section">
+  <span id="welcome" class="anchor"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center abcen3">
+          <br>
+          <!-- <h2 class="h1_home wow fadeIn"> Ask      <i class="fa fa-magic"></i></h2> --> 
+          <br>
+          
+          <div class="mobileNavbig">
+            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> Hi, there! Need help planning a Disney trip?</h1>
+            <p class="welcome" style="margin-top:0">
+              <br><strong>Check out my answers to reader questions, and <a href="#ask"><button type="button" class="btn btn-back">Message Me</button></a> if you don't find what you need!<strong>
+            </p>
+            <br>
+          </div> 
+
+          <div class="mobileNavsmall">
+            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
+            <br>Hi, there! Need help planning a Disney trip?</h1>
+            <p class="welcome" style="margin-top:0">
+              <br><strong>Check out my answers to reader questions, and <a href="#ask">message me</a> if you don't find what you need!<strong>
+            </p>
+            <br>
+          </div>
+
+          <br>
+          <%= render 'tags/answers' %>       
+        </div>
+    </div>
+  </div>
+<!-- </div> -->
+<!-- End Contact Me -->
+<!-- TOPICS -->
+
+
+
+<!-- End TOPICS -->
+
+<!-- Blog -->
+
+<div class="section">
+  <div class="container">
+    <br>
+    <span id="read" class="anchor"></span>
+    <% if @recent_posts.exists? %>
+        <h1 class="sectionhead">Blog <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
+        <%= render 'todaysanswer' %>
+        <br>
+        <h1 class="sectionhead">Blog <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1><hr>
+        <%= render 'allbuttoday' %>   
+    <% end %>
+    
+  </div>
+</div> 
+
+
+
+<!-- End Today's Answers -->
+
+
+<hr>
+<!-- Contact Me -->
+<div class="section">
   <span id="ask" class="anchor"></span>
     <div class="container">
       <div class="row">
@@ -19,19 +82,18 @@
           <br>
           
           <div class="mobileNavbig">
-            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
-            Hi, there! Need help planning a Disney trip?</h1>
+            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %>Can't find what you need? </h1>
             <p class="welcome" style="margin-top:0">
-              <br><strong>Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check below later today for your answers!
+              <strong>Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check back later today for your answers!
             </p>
             <br>
           </div> 
 
           <div class="mobileNavsmall">
             <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
-            <br>Hi, there! Need help planning a Disney trip?</h1>
+            <br>
             <p class="welcome" style="margin-top:0">
-              <br><strong>Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check back later today for your answers!
+              <br><strong>Can't find what you need? Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check back later today for your answers!
             </p>
             <br>
           </div>
@@ -44,72 +106,6 @@
 <!-- </div> -->
 <!-- End Contact Me -->
 
-<!-- Today's Answers -->
-
-<div class="section">
-  <div class="container">
-    <br>
-    <span id="read" class="anchor"></span>
-    <% if @recent_posts.exists? %>
-        <h1 class="sectionhead">Today's Answer <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
-        <%= render 'todaysanswer' %>
-        <br>
-        <h1 class="sectionhead">Read More <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1><hr>
-        <%= render 'allbuttoday' %>   
-    <% end %>
-    
-  </div>
-</div> 
-
-
-
-<!-- End Today's Answers -->
-
-<!-- TOPICS -->
-
-
-<div class="section">
-    <div class="container">
-      <span id="topics" class="anchor"></span>
-      <h1 class="sectionhead">Topics <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
-      <hr> 
-      <div class="float-center ">
-        <div id="posts" class="transitions-enabled"> 
-
-            <div class="box panel panel-default"> 
-              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-cutlery fa-2x"></i> <br>Food'.html_safe, tags_show_path(id:4), class: 'btn btn-lg btn-block outline' %></h3>
-            </div>
-
-            <div class="box panel panel-default">
-              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-bed fa-2x"></i> <br>Resorts'.html_safe, tags_show_path(id:3), class: 'btn btn-lg btn-block outline' %></h3>
-            </div>
-
-            <div class="box panel panel-default">
-              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-rocket fa-2x"></i> <br>Parks'.html_safe, tags_show_path(id:19), class: 'btn btn-lg btn-block outline' %></h3>
-            </div>
-
-            <div class="box panel panel-default">
-              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-bus fa-2x"></i> <br>Transport'.html_safe, tags_show_path(id:23), class: 'btn btn-lg btn-block outline' %></h3>
-            </div>
-
-            <div class="box panel panel-default">
-              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-gift fa-2x"></i> <br>Shopping'.html_safe, tags_show_path(id:25), class: 'btn btn-lg btn-block outline' %></h3>
-            </div>
-
-            <div class="box panel panel-default">
-              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-usd fa-2x"></i> <br>Budgets'.html_safe, tags_show_path(id:27), class: 'btn btn-lg btn-block outline' %></h3>
-            </div>
-
-        </div>
-          
-        </div>
-      </div>
-
-      <br><br>
-    </div>
-  </div>
-
-<!-- End TOPICS -->
 
 <!-- SEARCH box ******************** 
 
@@ -125,6 +121,14 @@
   </div>
 </div>
 <!-- End Search box -->
+
+<!-- Instagram -->
+<div class="section answers"> 
+  <br><h1 class="nobootstrap">Follow me <%= link_to image_tag("Insta.png", size: "60x60") %></h1>
+  <script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/a3b58894345b588fbc93588184fa043b.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+</div>
+
+<!-- End Instagram -->
 
 <div><%= render 'layouts/footer' %></div>  
 

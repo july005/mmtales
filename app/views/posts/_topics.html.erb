@@ -1,0 +1,41 @@
+<div class="section">
+    <div class="container">
+      <span id="topics" class="anchor"></span>
+      <hr>
+      <h1 class="sectionhead">Topics <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
+      <hr> 
+      <div class="float-center ">
+        <div id="posts" class="transitions-enabled"> 
+
+            <div class="box panel panel-default"> 
+              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-cutlery fa-2x"></i> <br>Food'.html_safe, tags_show_path(id:4), class: 'btn btn-lg btn-block outline' %></h3>
+            </div>
+
+            <div class="box panel panel-default">
+              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-bed fa-2x"></i> <br>Resorts'.html_safe, tags_show_path(id:3), class: 'btn btn-lg btn-block outline' %></h3>
+            </div>
+
+            <div class="box panel panel-default">
+              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-rocket fa-2x"></i> <br>Parks'.html_safe, tags_show_path(id:19), class: 'btn btn-lg btn-block outline' %></h3>
+            </div>
+
+            <div class="box panel panel-default">
+              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-bus fa-2x"></i> <br>Transport'.html_safe, tags_show_path(id:23), class: 'btn btn-lg btn-block outline' %></h3>
+            </div>
+
+            <div class="box panel panel-default">
+              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-gift fa-2x"></i> <br>Shopping'.html_safe, tags_show_path(id:25), class: 'btn btn-lg btn-block outline' %></h3>
+            </div>
+
+            <div class="box panel panel-default">
+              <h3 class="text-center topicbutton"><%= link_to '<i class="fa fa-usd fa-2x"></i> <br>Budgets'.html_safe, tags_show_path(id:27), class: 'btn btn-lg btn-block outline' %></h3>
+            </div>
+
+        </div>
+          
+        </div>
+      </div>
+
+      <br><br>
+    </div>
+  </div>
