@@ -27,14 +27,12 @@
           </div>
         </div>
         <br>
+        <br>
         <div class="row">
-          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <p class="welcome" style="margin-top:0"><strong>Browse the Q & A below</p>
-          </div>
-           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">           
+           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">           
             <%= form_tag(posts_search_path, method: "get", class: "navbar-form") do %>
               <div class="input-group add-on">
-                <%= text_field_tag(:query, nil, placeholder: 'Search', class: "form-control input-lg") %>
+                <%= text_field_tag(:query, nil, placeholder: 'I want to know about...', class: "form-control input-lg") %>
                   <div class="input-group-btn">
                     <%= button_tag(type: "submit", class: "btn btn-primary btn-lg") do %>
                       <i class="fa fa-search" aria-hidden="true"></i>                      <% end %>
@@ -42,12 +40,11 @@
               </div>
             <% end %>
           </div>
-          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-             <p class="welcome"></p>
-            <a href="#ask"><button type="button" class="btn btn-back">Message Me Your Question <i class="fa fa-envelope"></i></button></a>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <a href="#ask"><button type="button" class="btn btn-back btn-lg">Ask a Question <i class="fa fa-envelope"></i></button></a>
           </div>
         </div> 
-        <hr><hr>
+        <br><hr><hr>
         <%= render 'tags/answers' %>       
       </div>
   </div>
@@ -90,19 +87,14 @@
           <br>
           
           <div class="mobileNavbig">
-            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %>Can't find what you need? </h1>
-            <p class="welcome" style="margin-top:0">
-              <strong>Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check back later today for your answers!
-            </p>
+            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> Ask a Question</h1>
+            <p class="welcome" style="margin-top:0">... and check back later today for your answer! </p>
             <br>
           </div> 
 
           <div class="mobileNavsmall">
-            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
-            <br>
-            <p class="welcome" style="margin-top:0">
-              <br><strong>Can't find what you need? Send me your questions</strong> <i class="fa fa-arrow-down" aria-hidden="true"></i> <br>... and check back later today for your answers!
-            </p>
+            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> Ask a Question</h1> 
+            <p class="welcome" style="margin-top:0">... and check back later today for your answers!</p>
             <br>
           </div>
 

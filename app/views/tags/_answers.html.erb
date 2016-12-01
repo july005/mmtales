@@ -3,8 +3,11 @@
   <div class="container">
     <div class="col-md-12">
       <div id="QandA" class="transitions-enabled">
-
-
+        
+        <div class="row">
+          <h1 class="posts"><%= link_to image_tag("fairygirledit.png", height: "30px") %> Latest Answers <%= link_to image_tag("fairygirledit.png", height: "30px") %></h1>
+        </div>
+        <hr>
         <div class="row">
           <div class="col-md-3">
             <div class="box2 panel panel-default">
@@ -42,7 +45,7 @@
             <% end %>
         </div>
    
-      <div class="row"><%= link_to 'More', tags_show_path(id:3), class: 'btn btn-resorts btn-lg btn-block' %></div> 
+      <div class="row"><%= link_to 'More: Resorts', tags_show_path(id:3), class: 'btn btn-resorts btn-lg btn-block' %></div> 
       <br>
 
       <div class="section answers"> 
@@ -81,7 +84,7 @@
         </div>
       </div>
 
-      <div class="row"><%= link_to 'More', tags_show_path(id:3), class: 'btn btn-parks btn-lg btn-block' %></div> 
+      <div class="row"><%= link_to 'More: Parks', tags_show_path(id:3), class: 'btn btn-parks btn-lg btn-block' %></div> 
       <br>
 
         <div class="row">
@@ -156,7 +159,7 @@
       </div>
 
  
-      <div class="row"><%= link_to 'More', tags_show_path(id:3), class: 'btn btn-transport btn-lg btn-block' %></div> 
+      <div class="row"><%= link_to 'More: Transport', tags_show_path(id:3), class: 'btn btn-transport btn-lg btn-block' %></div> 
       <br>
 
 
@@ -194,7 +197,7 @@
         </div>
 
    
-      <div class="row"><%= link_to 'More', tags_show_path(id:3), class: 'btn btn-shopping btn-lg btn-block' %></div> 
+      <div class="row"><%= link_to 'More: Shopping', tags_show_path(id:3), class: 'btn btn-shopping btn-lg btn-block' %></div> 
       <br>
 
       <div class="section answers"> 
@@ -233,7 +236,7 @@
       </div>
 
      
-      <div class="row"><%= link_to 'More', tags_show_path(id:3), class: 'btn btn-budgets btn-lg btn-block' %></div> 
+      <div class="row"><%= link_to 'More: Budgets', tags_show_path(id:3), class: 'btn btn-budgets btn-lg btn-block' %></div> 
       <br>
 
     </div> 

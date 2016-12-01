@@ -4,11 +4,16 @@
 <%= render 'layouts/navbar' %> 
 <div class="container">
   <div class="jumbotron">
-    <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "50x50") %> <%= @post.title %></h1>
+    <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "50x50") %> 
+      <% if @post.title.present? %>
+        <%= @post.title %></h1>
+      <% end %>
     <br><br>
     <div class="Grid">
       <div class="Grid--1ofX">
-        <%= image_tag @post.image.url(:xlarge), :class => "center-block" %> 
+        <% if @post.image.present? %>
+          <%= image_tag @post.image.url(:xlarge), :class => "center-block" %> 
+        <% end %>
       </div>
      </div>
     
