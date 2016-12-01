@@ -9,11 +9,10 @@
 <%= render 'layouts/navbarHomeNew' %> 
 
 <!-- Contact Me -->
-<div class="section">
+<div class="section answersTop">
   <span id="welcome" class="anchor"></span>
     <div class="container text-center">
       
-    
         <div class="mobileNavbig">
           <div class="row">
             <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
@@ -41,20 +40,16 @@
             <% end %>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <a href="#ask"><button type="button" class="btn btn-back btn-lg">Ask a Question <i class="fa fa-envelope"></i></button></a>
+            <a href="#ask"><button type="button" class="btn btn-ask btn-lg"><p class="posts">Ask a Question <i class="fa fa-envelope"></i></p></button></a>
           </div>
         </div> 
-        <br><hr><hr>
-        <%= render 'tags/answers' %>       
-      </div>
-  </div>
-<!-- </div> -->
-<!-- End Contact Me -->
-<!-- TOPICS -->
+       </div>
+  </div>   
+</div>
+        
+<!-- Q&A -->
 
-
-
-<!-- End TOPICS -->
+<%= render 'tags/answers' %>      
 
 <!-- Blog -->
 

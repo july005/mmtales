@@ -156,7 +156,11 @@ h1 {
 .nobootstrap { /* 100+1=101 priority score, yay! */
   font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
   color: inherit;
-  font-size: calc(0.75em + 5vmin);
+  background-color: white;
+  padding-bottom: 15px;
+  margin-top: 0px;
+  font-weight: 700;
+  font-size: 3em
 }
 .sectionhead {
   font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
@@ -177,12 +181,14 @@ h2 {
 .posts {
   text-align: center;
   font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
+  padding: 20px;
 }
 .topic_welcome {
   font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
   background-color: white;
   font-size: 2em;
   padding-bottom: 15px;
+  text-align: center;
 
 }
 .postsindex {
@@ -282,6 +288,7 @@ p, ol, ul, td {
   font-size: 1.5em;
   font-weight: 200;
   line-height: 1.4;
+
 }
 
 span.highlight {
@@ -395,6 +402,15 @@ cite {
 
 .answers {
     background-color: #ECEBEB;
+  }
+
+.answersTop {
+  background-color: #ECEBEB;
+  background-image: image-url("background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 520px; 
+  /*width: 35vmin;*/
   }
 
 .anchor {
@@ -627,7 +643,11 @@ Bootstrap button overrides
     box-shadow: 0 3px 0 0 #ffb980;
     font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
 }
-
+.btn-ask {
+  background-color: #D4919E;
+  color: white;
+  box-shadow: 0 3px 0 0 #ffb980;
+}
 
 
 .rotate {
@@ -646,5 +666,47 @@ Bootstrap button overrides
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for vh unit */
+  min-height: 100vh; /* You might also want to use
+                        'height' property instead.
+                        
+                        Note that for percentage values of
+                        'height' or 'min-height' properties,
+                        the 'height' of the parent element
+                        should be specified explicitly.
+  
+                        In this case the parent of '.vertical-center'
+                        is the <body> element */
+
+  /* Make it a flex container */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  
+  /* Align the bootstrap's container vertically */
+    -webkit-box-align : center;
+  -webkit-align-items : center;
+       -moz-box-align : center;
+       -ms-flex-align : center;
+          align-items : center;
+  
+  /* In legacy web browsers such as Firefox 9
+     we need to specify the width of the flex container */
+  width: 100%;
+  
+  /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+     hence the bootstrap's container won't be aligned to the center anymore.
+  
+     Therefore, we should use the following declarations to get it centered again */
+         -webkit-box-pack : center;
+            -moz-box-pack : center;
+            -ms-flex-pack : center;
+  -webkit-justify-content : center;
+          justify-content : center;
 }
 
