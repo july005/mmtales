@@ -19,13 +19,13 @@
           </div>
             <% @resorts_posts.each do |post| %>
               <% if post.subtitle.present? %> 
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-3">
                   <div class="box2 panel panel-default">
 
                     <div class="panel-top">
                       <p class="boxes-center"><strong>Question</strong></p> 
                       <div class="hr-welcome"></div>
-                      <p class="boxes"><%= link_to truncate(post.subtitle, length:135), post %></p>
+                      <p class="boxes"><%= link_to truncate(post.subtitle, length:109), post %></p>
                     </div>
                     
                     <div class="panel-body">
@@ -60,12 +60,12 @@
           </div>
             <% @parks_posts.each do |post| %>
               <% if post.subtitle.present? %> 
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-3">
                   <div class="box2 panel panel-default">
                     <div class="panel-top">
                       <p class="boxes-center"><strong>Question</strong></p> 
                       <div class="hr-welcome"></div>
-                      <p class="boxes"><%= link_to truncate(post.subtitle, length:135), post %></p>
+                      <p class="boxes"><%= link_to truncate(post.subtitle, length:109), post %></p>
                     </div>
 
                     <div class="panel-body"><hr>
@@ -98,12 +98,12 @@
           </div>
             <% @dining_posts.each do |post| %>
               <% if post.subtitle.present? %> 
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-3">
                   <div class="box2 panel panel-default">
                     <div class="panel-top">
                       <p class="boxes-center"><strong>Question</strong></p> 
                       <div class="hr-welcome"></div>
-                      <p class="boxes"><%= link_to truncate(post.subtitle, length:135), post %></p>
+                      <p class="boxes"><%= link_to truncate(post.subtitle, length:109), post %></p>
                     </div>
                     <div class="panel-body"><hr>
                       <%= link_to post, class: 'btn btn-dining btn-lg btn-block' do %>
@@ -135,12 +135,12 @@
           </div>
             <% @transport_posts.each do |post| %>
               <% if post.subtitle.present? %> 
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-3">
                   <div class="box2 panel panel-default">
                     <div class="panel-top">
                       <p class="boxes-center"><strong>Question</strong></p> 
                       <div class="hr-welcome"></div>
-                      <p class="boxes"><%= link_to truncate(post.subtitle, length:135), post %></p>
+                      <p class="boxes"><%= link_to truncate(post.subtitle, length:109), post %></p>
                     </div>
                     <div class="panel-body"><hr>
                       <%= link_to post, class: 'btn btn-transport btn-lg btn-block' do %>
@@ -174,12 +174,12 @@
           </div>
             <% @shopping_posts.each do |post| %>
               <% if post.subtitle.present? %> 
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-3">
                   <div class="box2 panel panel-default">
                     <div class="panel-top">
                       <p class="boxes-center"><strong>Question</strong></p> 
                       <div class="hr-welcome"></div>
-                      <p class="boxes"><%= link_to truncate(post.subtitle, length:135), post %></p>
+                      <p class="boxes"><%= link_to truncate(post.subtitle, length:109), post %></p>
                     </div>
                     <div class="panel-body"><hr>
                       <%= link_to post, class: 'btn btn-shopping btn-lg btn-block' do %>
@@ -212,12 +212,12 @@
           </div>
             <% @budgets_posts.each do |post| %>
               <% if post.subtitle.present? %> 
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-3">
                   <div class="box2 panel panel-default">
                     <div class="panel-top">
                       <p class="boxes-center"><strong>Question</strong></p> 
                       <div class="hr-welcome"></div>
-                      <p class="boxes"><%= link_to truncate(post.subtitle, length:135), post %></p>
+                      <p class="boxes"><%= link_to truncate(post.subtitle, length:109), post %></p>
                     </div>
                     <div class="panel-body"><hr>
                       <%= link_to post, class: 'btn btn-budgets btn-lg btn-block' do %>

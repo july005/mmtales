@@ -482,6 +482,26 @@ cite {
 .panel-whole {
   height: 266px;
 }
+
+@media (min-width: 450px) and (max-width: 992px) {
+    .panel-top {
+      height: 110px;
+    }
+
+    .panel-whole {
+      height: 206px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .panel-top {
+      height: 195px;
+    }
+
+    .panel-whole {
+      height: 291px;
+    }
+}
 /* -------------------------------------------------
 Responsive image size for post show page
 ------------------------------------------------- */
