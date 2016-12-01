@@ -11,34 +11,45 @@
 <!-- Contact Me -->
 <div class="section">
   <span id="welcome" class="anchor"></span>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 text-center abcen3">
-          <br>
-          <!-- <h2 class="h1_home wow fadeIn"> Ask      <i class="fa fa-magic"></i></h2> --> 
-          <br>
-          
-          <div class="mobileNavbig">
-            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> Hi, there! Need help planning a Disney trip?</h1>
-            <p class="welcome" style="margin-top:0">
-              <br><strong>Check out my answers to reader questions, and <a href="#ask"><button type="button" class="btn btn-back">Message Me</button></a> if you don't find what you need!<strong>
-            </p>
-            <br>
-          </div> 
-
-          <div class="mobileNavsmall">
+    <div class="container text-center">
+      
+    
+        <div class="mobileNavbig">
+          <div class="row">
+            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
+              Hi, there! Need help planning a Disney trip?</h1>
+          </div>
+        </div>
+        <div class="mobileNavsmall">
+          <div class="row">
             <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
             <br>Hi, there! Need help planning a Disney trip?</h1>
-            <p class="welcome" style="margin-top:0">
-              <br><strong>Check out my answers to reader questions, and <a href="#ask">message me</a> if you don't find what you need!<strong>
-            </p>
-            <br>
           </div>
-
-          <br>
-          <%= render 'tags/answers' %>       
         </div>
-    </div>
+        <br>
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <p class="welcome" style="margin-top:0"><strong>Browse the Q & A below</p>
+          </div>
+           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">           
+            <%= form_tag(posts_search_path, method: "get", class: "navbar-form") do %>
+              <div class="input-group add-on">
+                <%= text_field_tag(:query, nil, placeholder: 'Search', class: "form-control input-lg") %>
+                  <div class="input-group-btn">
+                    <%= button_tag(type: "submit", class: "btn btn-primary btn-lg") do %>
+                      <i class="fa fa-search" aria-hidden="true"></i>                      <% end %>
+                    </div>
+              </div>
+            <% end %>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+             <p class="welcome"></p>
+            <a href="#ask"><button type="button" class="btn btn-back">Message Me Your Question <i class="fa fa-envelope"></i></button></a>
+          </div>
+        </div> 
+        <hr><hr>
+        <%= render 'tags/answers' %>       
+      </div>
   </div>
 <!-- </div> -->
 <!-- End Contact Me -->
