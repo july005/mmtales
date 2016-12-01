@@ -9,37 +9,40 @@
 <%= render 'layouts/navbarHomeNew' %> 
 
 <!-- Contact Me -->
-<div class="section answersTop">
+
   <span id="welcome" class="anchor"></span>
     <div class="container text-center">
-      
+      <div class="section">
         <div class="mobileNavbig">
           <div class="row">
             <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
-              Hi, there! Need help planning a Disney trip?</h1>
+             Got Disney trip questions?</h1>
           </div>
         </div>
         <div class="mobileNavsmall">
           <div class="row">
             <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
-            <br>Hi, there! Need help planning a Disney trip?</h1>
+            <br>Hi, there! I'm here to help you plan a Disney trip</h1>
           </div>
         </div>
+      </div>
+    <div class="section border-between">
         <br>
         <br>
-        <div class="row">
-           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">           
+        <div class="row border-between">
+           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 answersTopLeft">           
             <%= form_tag(posts_search_path, method: "get", class: "navbar-form") do %>
               <div class="input-group add-on">
                 <%= text_field_tag(:query, nil, placeholder: 'I want to know about...', class: "form-control input-lg") %>
                   <div class="input-group-btn">
                     <%= button_tag(type: "submit", class: "btn btn-primary btn-lg") do %>
-                      <i class="fa fa-search" aria-hidden="true"></i>                      <% end %>
+                      <i class="fa fa-search" aria-hidden="true"></i>                      
+                    <% end %>
                     </div>
               </div>
             <% end %>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 answersTopRight">
             <a href="#ask"><button type="button" class="btn btn-ask btn-lg"><p class="posts">Ask a Question <i class="fa fa-envelope"></i></p></button></a>
           </div>
         </div> 
@@ -64,14 +67,10 @@
     
   </div>
 </div> 
-
-
-
-<!-- End Today's Answers -->
-
-
 <hr>
+
 <!-- Contact Me -->
+
 <div class="section">
   <span id="ask" class="anchor"></span>
     <div class="container">
@@ -98,24 +97,7 @@
         </div>
     </div>
   </div>
-<!-- </div> -->
-<!-- End Contact Me -->
 
-
-<!-- SEARCH box ******************** 
-
-  <div class="section">
-    <div class="container">
-      <span id="screen" class="anchor"></span>
-
-        <h2 class="posts">
-        ***  < %= render 'search' %>
-        </h2>
-      <hr> 
-    </div>
-  </div>
-</div>
-<!-- End Search box -->
 
 <!-- Instagram -->
 <div class="section answers"> 
