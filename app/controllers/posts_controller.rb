@@ -20,12 +20,12 @@ class PostsController < ApplicationController
 
     @tags = ActsAsTaggableOn::Tag.all
     
-    @resorts_posts = Post.tagged_with("Resorts").order("created_at DESC").limit(3)
-    @parks_posts = Post.tagged_with("Parks").order("created_at DESC").limit(3)
-    @dining_posts = Post.tagged_with("Dining").order("created_at DESC").limit(3)
-    @transport_posts = Post.tagged_with("Transport").order("created_at DESC").limit(3)
-    @shopping_posts = Post.tagged_with("Shopping").order("created_at DESC").limit(3)
-    @budgets_posts = Post.tagged_with("Budgets").order("created_at DESC").limit(3)
+    @resorts_posts = Post.tagged_with("Resorts").order("created_at DESC")
+    @parks_posts = Post.tagged_with("Parks").order("created_at DESC")
+    @dining_posts = Post.tagged_with("Dining").order("created_at DESC")
+    @transport_posts = Post.tagged_with("Transport").order("created_at DESC")
+    @shopping_posts = Post.tagged_with("Shopping").order("created_at DESC")
+    @budgets_posts = Post.tagged_with("Budgets").order("created_at DESC")
 
   end
 

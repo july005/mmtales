@@ -22,8 +22,8 @@
               </div>
             </div>
           </div>
-            <% @resorts_posts.each do |post| %>
-              <% if post.subtitle.present? %> 
+            <% @resorts_posts.where("length(subtitle) > 0").limit(3).each do |post| %>
+            
                 <div class="col-lg-3 col-md-3">
                   <div class="box2 panel panel-default">
 
@@ -43,7 +43,7 @@
 
                   </div>
                 </div>
-              <% end %>
+          
             <% end %>
         </div>
    
@@ -63,8 +63,8 @@
               </div>
             </div>
           </div>
-            <% @parks_posts.each do |post| %>
-              <% if post.subtitle.present? %> 
+             <% @parks_posts.where("length(subtitle) > 0").limit(3).each do |post| %>
+              
                 <div class="col-lg-3 col-md-3">
                   <div class="box2 panel panel-default">
                     <div class="panel-top">
@@ -81,7 +81,7 @@
                     </div>
                   </div>
                 </div>
-              <% end %>
+              
             <% end %>
         </div>
       </div>
@@ -101,8 +101,8 @@
               </div>
             </div>
           </div>
-            <% @dining_posts.each do |post| %>
-              <% if post.subtitle.present? %> 
+             <% @dining_posts.where("length(subtitle) > 0").limit(3).each do |post| %>
+              
                 <div class="col-lg-3 col-md-3">
                   <div class="box2 panel panel-default">
                     <div class="panel-top">
@@ -118,7 +118,7 @@
                     </div>
                   </div>
                 </div>
-              <% end %>
+          
             <% end %>
         </div>
      
@@ -138,8 +138,8 @@
               </div>
             </div>
           </div>
-            <% @transport_posts.each do |post| %>
-              <% if post.subtitle.present? %> 
+             <% @transport_posts.where("length(subtitle) > 0").limit(3).each do |post| %>
+
                 <div class="col-lg-3 col-md-3">
                   <div class="box2 panel panel-default">
                     <div class="panel-top">
@@ -155,7 +155,7 @@
                     </div>
                   </div>
                 </div>
-              <% end %>
+
             <% end %>
         </div>
       </div>
@@ -177,8 +177,8 @@
               </div>
             </div>
           </div>
-            <% @shopping_posts.each do |post| %>
-              <% if post.subtitle.present? %> 
+             <% @shopping_posts.where("length(subtitle) > 0").limit(3).each do |post| %>
+
                 <div class="col-lg-3 col-md-3">
                   <div class="box2 panel panel-default">
                     <div class="panel-top">
@@ -194,7 +194,7 @@
                     </div>
                   </div>
                 </div>
-              <% end %>
+             
             <% end %>
         </div>
 
@@ -215,8 +215,8 @@
               </div>
             </div>
           </div>
-            <% @budgets_posts.each do |post| %>
-              <% if post.subtitle.present? %> 
+             <% @budgets_posts.where("length(subtitle) > 0").limit(3).each do |post| %>
+             
                 <div class="col-lg-3 col-md-3">
                   <div class="box2 panel panel-default">
                     <div class="panel-top">
@@ -232,7 +232,7 @@
                     </div>
                   </div>
                 </div>
-              <% end %>
+
             <% end %>
         </div>
       </div>

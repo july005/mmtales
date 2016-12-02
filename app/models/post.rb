@@ -3,10 +3,8 @@ class Post < ActiveRecord::Base
 	include PgSearch
 	pg_search_scope :search_title, :against => [:title, :subtitle, :body]
 
-
 	before_save :sanitize_body
 	belongs_to :user
-	
 
 	has_attached_file :image,
 		storage: :s3,
@@ -41,6 +39,8 @@ class Post < ActiveRecord::Base
     end
     post_array.uniq.delete(self)
   end
+
+
 
   def to_param
   	"#{id} #{title}".parameterize
