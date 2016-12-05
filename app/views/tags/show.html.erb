@@ -1,24 +1,59 @@
 <%= render 'layouts/navbar' %> 
 <div class="container">
   <div class="jumbotron">
-    <h1 class="nobootstrap">Answer topic: <strong><%= @tag.name %> </strong></h1>
-		<hr>
+    <h1 class="nobootstrap">Disney <strong><%= @tag.name %> </strong></h1><hr>
 
-		<div id="topics" class="transitions-enabled"> 
-		  
+		<div class="row">
+			<h2 class="posts"><%= link_to image_tag("fairygirledit.png", height: "40px") %> 
+				Blog posts about <%= @tag.name.downcase %>
+			</h2> 
+		</div>
+
+		<div>
 		  <% @posts.each do |post| %>
-		    <div class="box1 panel panel-default">
-		    	<%= link_to image_tag(post.image.url(:medium)), post%>
-					<div class="panel-body">
-            <p class="recentpost"><%= link_to truncate(post.title, length:35, separator:' ' ), post %></p>
-          </div>
-		    </div>
-		  <% end %>
+        <% if post.subtitle.empty? %>
+          <div class="row">
 
+						<div class="col-md-4">
+              <div class="Grid">
+                <div class="Grid--1ofX">
+                  <%= link_to image_tag(post.image.url(:xlarge)), post %>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <h3 class="postsindex"><%= link_to post.title, post %></h2>
+            </div>
+					</div>
+					<hr>
+				<% end %> 		    
+		  <% end %>
+		</div>
+		
+		
+		<div class="row">
+			<h2 class="posts"><%= link_to image_tag("fairygirlhead.jpg", height: "40px") %> 
+				Answers to reader questions about <%= @tag.name.downcase %>
+			</h2> 
+		</div>
+
+		<div>
+		  <% @posts.each do |post| %>
+		 		<% if post.subtitle.present? %>
+					<div class="row">	
+						<p><%= link_to truncate(post.title, length:120, separator:' ' ), post %></p>
+						<hr>
+					</div>
+		    <% end %>
+
+		  <% end %>
 		</div>
 		
 		<div class="center"><%= link_to 'Back', posts_path, class: "btn btn-back btn-lg" %></div>
 	</div>
+
 <%= render 'layouts/footer' %> 
+
 </div>
 
