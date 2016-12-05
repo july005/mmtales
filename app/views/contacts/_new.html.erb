@@ -1,10 +1,9 @@
 <div>
 	<%= form_for @contact do |f| %>
 
-			<%= f.text_area :message, as: :text, :autofocus=>true, :id => "contactme", class: 'form-control', rows: 4, :value => "Dear Monorails & Mickey Tales: ", :onfocus => "this.value = this.value;" %>
+			<%= f.text_area :message, as: :text, :id => "contactme", class: 'form-control', rows: 4, :value => "Dear Monorails & Mickey Tales: ", :onfocus => "this.value = this.value;" %>
 
 			<br>
-
 
 		<div class="row">
 			
@@ -27,9 +26,8 @@
 			<%= f.text_field :nickname, hint: 'leave this field blank' %>
 		</div>
 
-
-	</div>	
 	<% end %>
+</div>	
 
 <script>
 var contactmeInput = $('#contactme');

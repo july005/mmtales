@@ -107,11 +107,9 @@ body {
 
 #contactme {
     background: #8D9698 url(//orig03.deviantart.net/b762/f/2008/266/0/8/paper_by_francy84.jpg) repeat fixed 0 0;
-    /*background: url("assets/images/missing.png") no-repeat;*/
     background-attachment: fixed; 
     font-family: 'Special Elite', Helvetica, Arial, sans-serif;;
     font-size: 1.3em;
-
 }
 
 .form-control {
@@ -224,6 +222,7 @@ h3 {
   font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
   text-align: left;
   margin-left: 0.5em;
+  line-height: 0.5em;
 }
 
 .topicbutton {
@@ -414,8 +413,8 @@ cite {
   background-image: image-url("background.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  padding-bottom: 74px;
-  padding-top: 74px;
+  padding-bottom: 68px;
+  padding-top: 68px;
   border-bottom: 15px solid white;
   /*width: 35vmin;*/
   }
@@ -425,8 +424,8 @@ cite {
   background-image: image-url("background.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  padding-bottom: 60px;
-  padding-top: 60px;
+  padding-bottom: 76px;
+  padding-top: 76px;
   
   /*width: 35vmin;*/
   }

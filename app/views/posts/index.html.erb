@@ -8,16 +8,16 @@
 
 <%= render 'layouts/navbarHomeNew' %> 
 
-<!-- Contact Me -->
 
   <span id="welcome" class="anchor"></span>
     <div class="container text-center">
       <div class="section">
         <div class="mobileNavbig">
           <div class="row">
+            <br><br><br>
             <br><br>
             <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> 
-             Got Disney trip questions?</h1>
+             Got Disney trip questions?</h1><br><br>
           </div>
         </div>
         <div class="mobileNavsmall">
@@ -31,7 +31,10 @@
         <br>
         <br>
         <div class="row border-between">
-           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 answersTopLeft">           
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 answersTopLeft">           
+            <a href="#ask"><button type="button" class="btn btn-ask btn-lg"><h3 class="postshow">Ask a Question &nbsp;</h3></button></a>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 answersTopRight">
             <%= form_tag(posts_search_path, method: "get", class: "navbar-form") do %>
               <div class="input-group add-on">
                 <%= text_field_tag(:query, nil, placeholder: 'I want to know about...', class: "form-control input-lg") %>
@@ -43,16 +46,19 @@
               </div>
             <% end %>
           </div>
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 answersTopRight">
-            <a href="#ask"><button type="button" class="btn btn-ask btn-lg"><p class="posts">Ask a Question <i class="fa fa-envelope"></i></p></button></a>
-          </div>
-        </div> 
+        </div>
+        <br><br> 
        </div>
   </div>   
 </div>
         
 <!-- Q&A -->
-
+<div class="section answers">
+  <div class="row"><br> <br>
+    <h1 class="nobootstrap"><%= link_to image_tag("fairygirledit.png", height: "40px") %> Latest Answers </h1>
+    <br>
+  </div>
+</div>
 <%= render 'tags/answers' %>      
 
 <!-- Blog -->
@@ -62,7 +68,7 @@
     <br>
     <span id="read" class="anchor"></span>
     <% if @recent_posts.exists? %>
-        <h1 class="sectionhead">Blog <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
+        <h1 class="nobootstrap"><br>Blog <%= link_to image_tag("fairygirledit.png", height: "40px") %></h1>
         <%= render 'allbuttoday' %>   
     <% end %>
     
@@ -70,26 +76,24 @@
 </div> 
 <hr>
 
-<!-- Contact Me -->
+<!-- Contact Me  -->
 
 <div class="section">
   <span id="ask" class="anchor"></span>
     <div class="container">
       <div class="row">
         <div class="col-xs-12 text-center">
-          <br>
-          <!-- <h2 class="h1_home wow fadeIn"> Ask      <i class="fa fa-magic"></i></h2> --> 
-          <br>
+          <br><br>
           
           <div class="mobileNavbig">
-            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> Ask a Question</h1>
-            <p class="welcome">... and check back later today for your answer! </p>
+            <h1 class="nobootstrap"><%= link_to image_tag("fairygirledit.png", height: "40px") %> Ask a Question</h1>
+            <p class="welcome">Check back later today for your answer! </p>
             <br>
           </div> 
 
           <div class="mobileNavsmall">
-            <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.jpg", size: "60x60") %> Ask a Question</h1> 
-            <p class="welcome">... and check back later today for your answers!</p>
+            <h1 class="nobootstrap"><%= link_to image_tag("fairygirledit.png", height: "40px") %> Ask a Question</h1> 
+            <p class="welcome">Check back later today for your answers!</p>
             <br>
           </div>
 
@@ -100,13 +104,14 @@
   </div>
 
 
+
 <!-- Instagram -->
 <div class="section answers"> 
-  <br><h1 class="nobootstrap">Follow me <%= link_to image_tag("Insta.png", size: "60x60") %></h1>
+  <h2 class="posts">Follow me <%= link_to image_tag("Insta.png", size: "40x40") %></h2>
   <script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/a3b58894345b588fbc93588184fa043b.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 </div>
 
-<!-- End Instagram -->
+<!-- End Instagram  -->
 
 <div><%= render 'layouts/footer' %></div>  
 
@@ -115,6 +120,10 @@ $(document).on('click','.navbar-collapse.in',function(e) {
     if( $(e.target).is('a') && ( $(e.target).attr('class') != 'dropdown-toggle' ) ) {
         $(this).collapse('hide');
     }
+});
+
+$(document).ready(function(){
+    $(this).scrollTop(0);
 });
 </script>
 
