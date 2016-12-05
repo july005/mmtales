@@ -1,29 +1,20 @@
 <div class="container">
     <div class="col-md-12">
-
-            <% if @recent_posts.present? %>
-                
-                <h2 class="posts"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "25x25") %> Read next:</h1><br>
-                
-                <div id="topics" class="topics transitions-enabled">
-
-                    <!-- loops through all @recent_posts -->
-
-                    <div class="row">
-                        <% @readmore_posts.each do |post| %>
-                            <div class="box1 panel panel-default">
-                                <%= link_to image_tag(post.image.url(:medium)), post %>
-                                <div class="panel-body">
-                                    <p class="recentpost"><%= link_to truncate(post.title, length:35, separator:' ' ), post %></p>
-                                </div>
+        <% if @recent_posts.present? %>
+            <h2 class="posts"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "25x25") %> Read next:</h1><br
+                <!-- loops through all @recent_posts -->
+                <div class="row">
+                    <% @readmore_posts.each do |post| %>
+                        <% if post.subtitle.present? %>
+                            <div class="row">   
+                                <p class="froalaquestion"><%= link_to image_tag("fairygirledit.png", class: "rotate", size: "25x25") %><%= link_to truncate(post.subtitle, length:120, separator:' ' ), post %></p>
+                                <hr>
                             </div>
                         <% end %>
-                    </div>
+                    <% end %>
+                </div>
                 <br>
-
             <% end %>
-
-        </div>
-        
+        </div>   
     </div>
 </div>

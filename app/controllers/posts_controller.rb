@@ -55,7 +55,7 @@ class PostsController < ApplicationController
     @todays_posts = Post.all.where("created_at > ? AND created_at < ?", Time.now.beginning_of_day, Time.now.end_of_day)
     @recent_posts = Post.all.order('created_at DESC').limit(3)
     @previous_posts = Post.all.where("created_at < ?", Time.now.beginning_of_day)
-    @readmore_posts = Post.all.where.not(id: @post.id).order("created_at DESC").limit(3)
+    @readmore_posts = Post.all.where.not(id: @post.id).order("created_at DESC").limit(5)
     @allbut_posts = Post.all.order("created_at DESC")
 
   end
