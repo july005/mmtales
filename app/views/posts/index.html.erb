@@ -32,7 +32,7 @@
         <br>
         <div class="row border-between">
           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 answersTopLeft">           
-            <a href="#ask"><button type="button" class="btn btn-ask btn-lg"><h3 class="postshow">Ask a Question &nbsp;</h3></button></a>
+            <a href="#ask"><button type="button" class="btn btn-ask btn-lg"><h3 class="postshow2">Ask a Question &nbsp;</h3></button></a>
           </div>
           <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 answersTopRight">
             <%= form_tag(posts_search_path, method: "get", class: "navbar-form") do %>
@@ -54,6 +54,7 @@
         
 <!-- Q&A -->
 <div class="section answers">
+  <span id="answers" class="anchor"></span>
   <div class="row"><br> <br>
     <h1 class="nobootstrap"><%= link_to image_tag("fairygirledit.png", height: "40px") %> Latest Answers </h1>
     <br>
