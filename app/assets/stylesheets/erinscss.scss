@@ -249,11 +249,20 @@ p, ol, ul, td {
   font-size: 1.1em;
   line-height: 18px;
 }
+.about {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  text-align: left;
+  line-height: 115%;
+  padding: 10px;
+  font-size: 20px;
+}
 .boxes {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   text-align: left;
   line-height: 170%;
+  font-size: 0.5fem;
   padding: 10px;
 }
 .boxes-center {
@@ -293,7 +302,7 @@ p, ol, ul, td {
 }
 .topics {
   font-family: "Lato", "Helvetica Neue";
-  font-size: .9em; 
+  font-size: 0.9em; 
 }
 
 .typewriter {
@@ -435,7 +444,7 @@ cite {
 
 .answersTopRight {
 
-  background-image: image-url("background.jpg");
+  background-image: image-url("background2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   padding-bottom: 76px;
