@@ -5,6 +5,7 @@
       <div id="QandA" class="transitions-enabled">
         <hr>
         <div class="row">
+
           <div class="col-md-3">
             <div class="box2 panel panel-default">
               <div class="topic_resorts">
@@ -16,36 +17,26 @@
               </div>
             </div>
           </div>
-            <% @resorts_posts.where("length(subtitle) > 0").limit(3).each do |post| %>
+            <% @resorts_posts.where("length(subtitle) > 0").limit(1).each do |post| %>
             
-                <div class="col-lg-3 col-md-3">
-                  <div class="box2 panel panel-default">
-
-                    <div class="panel-top">
-                      <p class="boxes-center"><strong>Question</strong></p> 
-                      <div class="hr-welcome"></div>
-                      <p class="boxes"><%= link_to truncate(post.subtitle, length:109), post %></p>
-                    </div>
-                    
-                    <div class="panel-body">
-                      <hr>
-                      <%= link_to post, class: 'btn btn-resorts btn-lg btn-block' do %>
-                        <%= image_tag("fairygirlhead.jpg", size: "22x22") %>
-                        <span>See Answer</span>
-                      <% end %>
-                    </div>
-
-                  </div>
+                <div class="col-md-9">
+                      <div class="froala-view">
+                          <br><%= link_to post.body.html_safe, post %>
+                      </div>
                 </div>
           
             <% end %>
-        </div>
+          </div>
+          <div class="row"> 
+            <%= link_to tags_show_path(id:3), class: 'btn btn-resorts btn-lg btn-block' do %>
+                        <%= image_tag("fairygirlhead.jpg", size: "22x22") %>
+                        <span>See more about: Resorts</span>
+                      <% end %>
+          </div>
+          <br>
    
-      <div class="row"><%= link_to 'More: Resorts', tags_show_path(id:3), class: 'btn btn-resorts btn-lg btn-block' %></div> 
-      <br>
-
-      <div class="section"> 
-        <div class="row">
+      <div class="row">
+          
           <div class="col-md-3">
             <div class="box2 panel panel-default">
               <div class="topic_parks">
@@ -57,33 +48,27 @@
               </div>
             </div>
           </div>
-             <% @parks_posts.where("length(subtitle) > 0").limit(3).each do |post| %>
-              
-                <div class="col-lg-3 col-md-3">
-                  <div class="box2 panel panel-default">
-                    <div class="panel-top">
-                      <p class="boxes-center"><strong>Question</strong></p> 
-                      <div class="hr-welcome"></div>
-                      <p class="boxes"><%= link_to truncate(post.subtitle, length:109), post %></p>
-                    </div>
-
-                    <div class="panel-body"><hr>
-                      <%= link_to post, class: 'btn btn-parks btn-lg btn-block' do %>
-                        <%= image_tag("fairygirlhead.jpg", size: "22x22") %>
-                        <span>See Answer</span>
-                      <% end %>
-                    </div>
-                  </div>
+            <% @parks_posts.where("length(subtitle) > 0").limit(1).each do |post| %>
+            
+                <div class="col-md-9">
+                      <div class="froala-view">
+                          <br><%= link_to post.body.html_safe, post %>
+                      </div>
                 </div>
-              
+ 
             <% end %>
+        </div>   
+        <div class="row">                   
+          <%= link_to tags_show_path(id:19), class: 'btn btn-parks btn-lg btn-block' do %>
+            <%= image_tag("fairygirlhead.jpg", size: "22x22") %>
+            <span>See more about: Parks</span>
+          <% end %>
         </div>
-      </div>
 
-      <div class="row"><%= link_to 'More: Parks', tags_show_path(id:3), class: 'btn btn-parks btn-lg btn-block' %></div> 
       <br>
 
-        <div class="row">
+      <div class="row">
+          
           <div class="col-md-3">
             <div class="box2 panel panel-default">
               <div class="topic_dining">
@@ -95,144 +80,119 @@
               </div>
             </div>
           </div>
-             <% @dining_posts.where("length(subtitle) > 0").limit(3).each do |post| %>
-              
-                <div class="col-lg-3 col-md-3">
-                  <div class="box2 panel panel-default">
-                    <div class="panel-top">
-                      <p class="boxes-center"><strong>Question</strong></p> 
-                      <div class="hr-welcome"></div>
-                      <p class="boxes"><%= link_to truncate(post.subtitle, length:109), post %></p>
-                    </div>
-                    <div class="panel-body"><hr>
-                      <%= link_to post, class: 'btn btn-dining btn-lg btn-block' do %>
-                        <%= image_tag("fairygirlhead.jpg", size: "22x22") %>
-                        <span>See Answer</span>
-                      <% end %>
-                    </div>
-                  </div>
+            <% @dining_posts.where("length(subtitle) > 0").limit(1).each do |post| %>
+            
+                <div class="col-md-9">
+                      <div class="froala-view">
+                          <br><%= link_to post.body.html_safe, post %>
+                      </div>
                 </div>
           
             <% end %>
         </div>
-     
-      <div class="row"><%= link_to 'More: Dining', tags_show_path(id:3), class: 'btn btn-dining btn-lg btn-block' %></div> 
+        <div class="row">
+          <%= link_to tags_show_path(id:29), class: 'btn btn-dining btn-lg btn-block' do %>
+            <%= image_tag("fairygirlhead.jpg", size: "22x22") %>
+            <span>See more about: Dining</span>
+          <% end %>
+        </div>
       <br>
 
-      <div class="section"> 
         <div class="row">
-          <div class="col-md-3">
-            <div class="box2 panel panel-default">
-              <div class="topic_transport">
-                <div class="panel-whole">
-                  <div class="topic-welcome-text">
-                    <h2 class="topic_welcome">Transport</h2>
+            
+            <div class="col-md-3">
+              <div class="box2 panel panel-default">
+                <div class="topic_transport">
+                  <div class="panel-whole">
+                    <div class="topic-welcome-text">
+                      <h2 class="topic_welcome">Transport</h2>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-             <% @transport_posts.where("length(subtitle) > 0").limit(3).each do |post| %>
-
-                <div class="col-lg-3 col-md-3">
-                  <div class="box2 panel panel-default">
-                    <div class="panel-top">
-                      <p class="boxes-center"><strong>Question</strong></p> 
-                      <div class="hr-welcome"></div>
-                      <p class="boxes"><%= link_to truncate(post.subtitle, length:109), post %></p>
-                    </div>
-                    <div class="panel-body"><hr>
-                      <%= link_to post, class: 'btn btn-transport btn-lg btn-block' do %>
-                        <%= image_tag("fairygirlhead.jpg", size: "22x22") %>
-                        <span>See Answer</span>
-                      <% end %>
-                    </div>
-                  </div>
+              <% @transport_posts.where("length(subtitle) > 0").limit(1).each do |post| %>
+              
+                  <div class="col-md-9">
+                        <div class="froala-view">
+                            <br><%= link_to post.body.html_safe, post %>
+                        </div>
+                  </div>   
                 </div>
-
+              <% end %>
+          </div>
+          <div class="row">
+            <%= link_to tags_show_path(id:23), class: 'btn btn-dining btn-lg btn-block' do %>
+              <%= image_tag("fairygirlhead.jpg", size: "22x22") %>
+              <span>See more about: Transport</span>
             <% end %>
-        </div>
-      </div>
-
- 
-      <div class="row"><%= link_to 'More: Transport', tags_show_path(id:3), class: 'btn btn-transport btn-lg btn-block' %></div> 
+          </div>
       <br>
 
-
         <div class="row">
-          <div class="col-md-3">
-            <div class="box2 panel panel-default">
-              <div class="topic_shopping">
-                <div class="panel-whole">
-                  <div class="topic-welcome-text">
-                    <h2 class="topic_welcome">Shopping</h2>
+            
+            <div class="col-md-3">
+              <div class="box2 panel panel-default">
+                <div class="topic_shopping">
+                  <div class="panel-whole">
+                    <div class="topic-welcome-text">
+                      <h2 class="topic_welcome">Shopping</h2>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-             <% @shopping_posts.where("length(subtitle) > 0").limit(3).each do |post| %>
-
-                <div class="col-lg-3 col-md-3">
-                  <div class="box2 panel panel-default">
-                    <div class="panel-top">
-                      <p class="boxes-center"><strong>Question</strong></p> 
-                      <div class="hr-welcome"></div>
-                      <p class="boxes"><%= link_to truncate(post.subtitle, length:109), post %></p>
-                    </div>
-                    <div class="panel-body"><hr>
-                      <%= link_to post, class: 'btn btn-shopping btn-lg btn-block' do %>
-                        <%= image_tag("fairygirlhead.jpg", size: "22x22") %>
-                        <span>See Answer</span>
-                      <% end %>
+              <% @shopping_posts.where("length(subtitle) > 0").limit(1).each do |post| %>
+              
+                  <div class="col-md-9">
+                    <div class="froala-view">
+                      <br>
+                      <%= link_to post.body.html_safe, post %>
                     </div>
                   </div>
                 </div>
-             
+            
+              <% end %>
+          </div>
+          <div class="row">
+            <%= link_to tags_show_path(id:25), class: 'btn btn-shopping btn-lg btn-block' do %>
+              <%= image_tag("fairygirlhead.jpg", size: "22x22") %>
+              <span>See more about: Shopping</span>
             <% end %>
-        </div>
-
-   
-      <div class="row"><%= link_to 'More: Shopping', tags_show_path(id:3), class: 'btn btn-shopping btn-lg btn-block' %></div> 
+          </div>
       <br>
 
-      <div class="section"> 
         <div class="row">
-          <div class="col-md-3">
-            <div class="box2 panel panel-default">
-              <div class="topic_budgets">
-                <div class="panel-whole">
-                  <div class="topic-welcome-text">
-                    <h2 class="topic_welcome">Budgets</h2>
+            
+            <div class="col-md-3">
+              <div class="box2 panel panel-default">
+                <div class="topic_budgets">
+                  <div class="panel-whole">
+                    <div class="topic-welcome-text">
+                      <h2 class="topic_welcome">Budgets</h2>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-             <% @budgets_posts.where("length(subtitle) > 0").limit(3).each do |post| %>
-             
-                <div class="col-lg-3 col-md-3">
-                  <div class="box2 panel panel-default">
-                    <div class="panel-top">
-                      <p class="boxes-center"><strong>Question</strong></p> 
-                      <div class="hr-welcome"></div>
-                      <p class="boxes"><%= link_to truncate(post.subtitle, length:109), post %></p>
-                    </div>
-                    <div class="panel-body"><hr>
-                      <%= link_to post, class: 'btn btn-budgets btn-lg btn-block' do %>
-                        <%= image_tag("fairygirlhead.jpg", size: "22x22") %>
-                        <span>See Answer</span>
-                      <% end %>
-                    </div>
+              <% @budgets_posts.where("length(subtitle) > 0").limit(1).each do |post| %>
+              
+                <div class="col-md-9">
+                  <div class="froala-view">
+                    <br>
+                    <%= link_to post.body.html_safe, post %>
                   </div>
                 </div>
-
+        
+            
+              <% end %>
+          </div>
+          <div class="row">
+            <%= link_to tags_show_path(id:27), class: 'btn btn-budgets btn-lg btn-block' do %>
+              <%= image_tag("fairygirlhead.jpg", size: "22x22") %>
+              <span>See more about: Budgets</span>
             <% end %>
-        </div>
-      </div>
-
-     
-      <div class="row"><%= link_to 'More: Budgets', tags_show_path(id:3), class: 'btn btn-budgets btn-lg btn-block' %></div> 
+          </div>
       <br>
 
     </div> 

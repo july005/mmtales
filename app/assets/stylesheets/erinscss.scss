@@ -286,6 +286,14 @@ p, ol, ul, td {
   font-size: 3.0vh;
   color: red;
 }
+.home {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  text-align: center;
+  line-height: 115%;
+  padding: 10px;
+  font-size: 20px;
+}
 .lead {
   font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
   margin-bottom: 21px;
@@ -320,7 +328,6 @@ p, ol, ul, td {
   font-size: 1.5em;
   font-weight: 200;
   line-height: 1.4;
-
 }
 
 span.highlight {
