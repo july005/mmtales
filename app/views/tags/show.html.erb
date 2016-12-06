@@ -1,7 +1,7 @@
 <%= render 'layouts/navbar' %> 
 <div class="container">
   <div class="jumbotron">
-    <h1 class="nobootstrap">Disney <strong><%= @tag.name %> </strong></h1><hr>
+    <h1 class="nobootstrap">Disney <strong><%= @tag.name.titleize %> </strong></h1><hr>
 
 		<div class="row">
 			<h2 class="posts"><%= link_to image_tag("fairygirledit.png", height: "40px") %> 
