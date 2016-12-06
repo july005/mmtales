@@ -7,7 +7,7 @@
                     <% @readmore_posts.each do |post| %>
                         <% if post.subtitle.present? %>
                             <div class="row">   
-                                <h4 class="poststags"><%= link_to image_tag("fairygirledit.png", class: "rotate", size: "20x20") %> <%= render @post.tags %> <%= link_to post.title, post %></h4>
+                                <h4 class="poststags"><%= link_to image_tag("fairygirledit.png", class: "rotate", size: "20x20") %> <%= link_to post.title, post %></h4>
                                 <hr>
                             </div>
                         <% end %>
