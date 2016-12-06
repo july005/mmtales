@@ -26,14 +26,15 @@ class PostsController < ApplicationController
     @transport_posts = Post.tagged_with("Transport").order("created_at DESC")
     @shopping_posts = Post.tagged_with("Shopping").order("created_at DESC")
     @budgets_posts = Post.tagged_with("Budgets").order("created_at DESC")
-
+    @page_title = "monorails & mickey tales"
   end
 
   def show
     set_meta_tags title: @post.title,
                   site: 'Monorails and Mickey Tales',
                   reverse: true,
-                  description: @post.subtitle, 
+                  description: @post.body, 
+                  keywords: %w[Disney World Trip Planning Save Money Monorails Mickey Tales Travel Tips Hotels Parks Resorts Dining Walt],
                   twitter: {
                     card: "summary",
                     site: "@disneywiz",
