@@ -40,14 +40,14 @@ class PostsController < ApplicationController
                     site: "@disneywiz",
                     title: "monorails & mickey tales",
                     description: @post.title,
-                    image: "fairygirlhead.jpg"
+                    image: "http://www.monorailsandmickeytales.com/assets/fairygirledit-cba4cb402f117b750075be61942326af00be0f915f51108beb403f460f64cb14.png"
                   },
                   og: {
                     title:  "monorails & mickey tales",
                     description: @post.title,
                     type: 'website',
                     url: post_url(@post),
-                    image: "fairygirlhead.jpg"
+                    image: "http://www.monorailsandmickeytales.com/assets/fairygirledit-cba4cb402f117b750075be61942326af00be0f915f51108beb403f460f64cb14.png"
                   },
                   alternate: {
                     href: 'http://www.monorailsandmickeytales.com/feed.rss', type: 'application/rss+xml', title: 'RSS'
