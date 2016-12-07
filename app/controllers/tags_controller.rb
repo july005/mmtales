@@ -21,7 +21,7 @@ class TagsController < ApplicationController
                     title:  "Monorails and Mickey Tales",
                     description: @tag.name,
                     type: 'website',
-            
+       
                     image: "fairygirlhead.jpg"
                   },
                   alternate: {
