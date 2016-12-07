@@ -15,14 +15,14 @@ class TagsController < ApplicationController
                     card: "summary",
                     site: "@monorails & mickey tales",
                     description: 'The best unbiased Disney trip advice',
-                    image: "fairygirlhead.jpg"
+                    image: "http://www.monorailsandmickeytales.com/assets/fairygirlhead-bc187813061e255e9022bb17018eb79173cc9a427286f861c99ca9169d0dc085.png"
                   },
                   og: {
                     title:  "Monorails and Mickey Tales",
                     description: @tag.name,
                     type: 'website',
        
-                    image: "fairygirlhead.jpg"
+                    image: "http://www.monorailsandmickeytales.com/assets/fairygirlhead-bc187813061e255e9022bb17018eb79173cc9a427286f861c99ca9169d0dc085.png"
                   },
                   alternate: {
                     href: 'http://www.monorailsandmickeytales.com/feed.rss', type: 'application/rss+xml', title: 'RSS'
