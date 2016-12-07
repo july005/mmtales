@@ -38,16 +38,16 @@ class PostsController < ApplicationController
                   twitter: {
                     card: "summary",
                     site: "@disneywiz",
-                    title: "Monorails and Mickey Tales",
+                    title: "monorails & mickey tales",
                     description: @post.title,
-                    image: @post.image.url
+                    image: "fairygirlhead.jpg"
                   },
                   og: {
-                    title:  "Monorails and Mickey Tales",
+                    title:  "monorails & mickey tales",
                     description: @post.title,
                     type: 'website',
                     url: post_url(@post),
-                    image: @post.image.url
+                    image: "fairygirlhead.jpg"
                   },
                   alternate: {
                     href: 'http://www.monorailsandmickeytales.com/feed.rss', type: 'application/rss+xml', title: 'RSS'
