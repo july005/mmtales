@@ -5,13 +5,13 @@
     </div>
   </div>
   <h2 class="posts">
-    <%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "50x50") %> <%= @recent_posts.first.title %>
+    <%= link_to image_tag("fairygirlhead.png", class: "rotate", size: "50x50") %> <%= @recent_posts.first.title %>
   </h2>
   <div class="froala-view">
     <%= @recent_posts.first.body.html_safe %>
   </div>
   <h2 class="heart"><i class="fa fa-heart" aria-hidden="true"></i>,<h2> 
-  <h2 class="signature">monorails & mickey tales <%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "50x50") %></h2>
+  <h2 class="signature">monorails & mickey tales <%= link_to image_tag("fairygirlhead.png", class: "rotate", size: "50x50") %></h2>
 
   <div class="row sectionhead section answers">
     <div class="text-center"><%= social_share_button_tag(@recent_posts.last.title) %></div>

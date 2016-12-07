@@ -1,7 +1,7 @@
 <div class="container">
     <div class="col-md-12">
         <% if @recent_posts.present? %>
-            <h2 class="posts"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "25x25") %> Read next:</h1><br
+            <h2 class="posts"><%= link_to image_tag("fairygirlhead.png", class: "rotate", size: "25x25") %> Read next:</h1><br
                 <!-- loops through all @recent_posts -->
                 <div class="row">
                     <% @readmore_posts.each do |post| %>
