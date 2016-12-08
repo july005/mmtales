@@ -37,7 +37,6 @@
       <% else %>
 
 <!-- End Blog post only -->
-        <h2 class="posts"> One reader asks: <%= @post.title %><br></h2>
         <div class="froala-view"><%= @post.body.html_safe %></div>
         <h2 class="heart"><i class="fa fa-heart" aria-hidden="true"></i>,<h2> 
         <h2 class="signature">monorails & mickey tales <%= link_to image_tag("fairygirlhead.png", class: "rotate", size: "50x50") %></h2>
