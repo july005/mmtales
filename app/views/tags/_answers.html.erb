@@ -20,9 +20,12 @@
             <% @resorts_posts.where("length(subtitle) > 0").limit(1).each do |post| %>
             
                 <div class="col-md-9">
-                      <div class="froala-view">
-                          <br><%= link_to post.body.html_safe, post %>
-                      </div>
+                  <div class="froala-view">
+                    <br><%= link_to post.body.html_safe, post %>
+                  </div>
+                  <hr>
+                  <p class="froalatext">What would your answer be? <%= link_to "Tell us!", post_url(post, anchor: 'comments'), class: 'btn btn-resorts-comment btn-sm' %><p>
+                  <br>
                 </div>
           
             <% end %>
@@ -51,9 +54,12 @@
             <% @parks_posts.where("length(subtitle) > 0").limit(1).each do |post| %>
             
                 <div class="col-md-9">
-                      <div class="froala-view">
-                          <br><%= link_to post.body.html_safe, post %>
-                      </div>
+                  <div class="froala-view">
+                    <br><%= link_to post.body.html_safe, post %>
+                  </div>
+                  <hr>
+                  <p class="froalatext">What would your answer be? <%= link_to "Tell us!", post_url(post, anchor: 'comments'), class: 'btn btn-parks-comment btn-sm' %><p>
+                  <br>
                 </div>
  
             <% end %>
@@ -83,9 +89,12 @@
             <% @dining_posts.where("length(subtitle) > 0").limit(1).each do |post| %>
             
                 <div class="col-md-9">
-                      <div class="froala-view">
-                          <br><%= link_to post.body.html_safe, post %>
-                      </div>
+                  <div class="froala-view">
+                    <br><%= link_to post.body.html_safe, post %>
+                  </div>
+                  <hr>
+                  <p class="froalatext">What would your answer be? <%= link_to "Tell us!", post_url(post, anchor: 'comments'), class: 'btn btn-dining-comment btn-sm' %><p>
+                  <br>
                 </div>
           
             <% end %>
@@ -113,12 +122,15 @@
             </div>
               <% @transport_posts.where("length(subtitle) > 0").limit(1).each do |post| %>
               
-                  <div class="col-md-9">
-                        <div class="froala-view">
-                            <br><%= link_to post.body.html_safe, post %>
-                        </div>
-                  </div>   
+                <div class="col-md-9">
+                  <div class="froala-view">
+                    <br><%= link_to post.body.html_safe, post %>
+                  </div>
+                  <hr>
+                  <p class="froalatext">What would your answer be? <%= link_to "Tell us!", post_url(post, anchor: 'comments'), class: 'btn btn-transport-comment btn-sm' %><p>
+                  <br>
                 </div>
+
               <% end %>
           </div>
           <div class="row">
@@ -144,12 +156,13 @@
             </div>
               <% @shopping_posts.where("length(subtitle) > 0").limit(1).each do |post| %>
               
-                  <div class="col-md-9">
-                    <div class="froala-view">
-                      <br>
-                      <%= link_to post.body.html_safe, post %>
-                    </div>
+                <div class="col-md-9">
+                  <div class="froala-view">
+                    <br><%= link_to post.body.html_safe, post %>
                   </div>
+                  <hr>
+                  <p class="froalatext">What would your answer be? <%= link_to "Tell us!", post_url(post, anchor: 'comments'), class: 'btn btn-shopping-comment btn-sm' %><p>
+                  <br>
                 </div>
             
               <% end %>
@@ -179,11 +192,12 @@
               
                 <div class="col-md-9">
                   <div class="froala-view">
-                    <br>
-                    <%= link_to post.body.html_safe, post %>
+                    <br><%= link_to post.body.html_safe, post %>
                   </div>
+                  <hr>
+                  <p class="froalatext">What would your answer be? <%= link_to "Tell us!", post_url(post, anchor: 'comments'), class: 'btn btn-budgets-comment btn-sm' %><p>
+                  <br>
                 </div>
-        
             
               <% end %>
           </div>

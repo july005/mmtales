@@ -286,6 +286,10 @@ p, ol, ul, td {
   font-size: 3.0vh;
   color: red;
 }
+.froalatext{
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
 .home {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
@@ -671,11 +675,23 @@ Bootstrap button overrides
     box-shadow: 0 3px 0 0 #ffb980;
     font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
 }
+.btn-resorts-comment {
+    clear:both;
+    background-color: #bee9e4;
+    box-shadow: 0 3px 0 0 #ffb980;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .btn-parks {
     clear:both;
     background-color: #76c4ae;
     box-shadow: 0 3px 0 0 #ffb980;
     font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
+}
+.btn-parks-comment {
+    clear:both;
+    background-color: #76c4ae;
+    box-shadow: 0 3px 0 0 #ffb980;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .btn-dining {
     clear:both;
@@ -683,11 +699,23 @@ Bootstrap button overrides
     box-shadow: 0 3px 0 0 #ffb980;
     font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
 }
+.btn-dining-comment {
+    clear:both;
+    background-color: #cabd80;
+    box-shadow: 0 3px 0 0 #ffb980;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .btn-transport {
     clear:both;
     background-color: #caeccf;
     box-shadow: 0 3px 0 0 #ffb980;
     font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
+}
+.btn-transport-comment {
+    clear:both;
+    background-color: #caeccf;
+    box-shadow: 0 3px 0 0 #ffb980;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .btn-shopping {
     clear:both;
@@ -695,11 +723,23 @@ Bootstrap button overrides
     box-shadow: 0 3px 0 0 #ffb980;
     font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
 }
+.btn-shopping-comment {
+    clear:both;
+    background-color: #ddb0a0;
+    box-shadow: 0 3px 0 0 #ffb980;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .btn-budgets {
     clear:both;
     background-color: #9fc2ba;
     box-shadow: 0 3px 0 0 #ffb980;
     font-family: 'Delius Swash Caps', Helvetica, Arial, sans-serif;
+}
+.btn-budgets-comment {
+    clear:both;
+    background-color: #9fc2ba;
+    box-shadow: 0 3px 0 0 #ffb980;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .btn-ask {
   background-color: #D4919E;
