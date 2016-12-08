@@ -4,50 +4,63 @@
 <%= render 'layouts/navbar' %> 
 <div class="container">
   <div class="jumbotron">
-    <h1 class="nobootstrap"><%= link_to image_tag("fairygirlhead.png", class: "rotate", size: "50x50") %> 
-      <% if @post.title.present? %>
-        <%= @post.title %></h1>
-      <% end %>
-    <br><br>
-    <div class="Grid">
-      <div class="Grid--1ofX">
-        <% if @post.image.present? %>
-          <%= image_tag @post.image.url(:xlarge), :class => "center-block" %> 
-        <% end %>
-      </div>
-     </div>
-    
-    
-    <hr>
-    <div class="froala-view"><%= @post.body.html_safe %></div>
-    
-    <h2 class="heart"><i class="fa fa-heart" aria-hidden="true"></i>,<h2> 
-    <h2 class="signature">monorails & mickey tales <%= link_to image_tag("fairygirlhead.png", class: "rotate", size: "50x50") %></h2>
-    <hr>
+
+<!-- Blog posts only --> 
+     
+      <% if @post.subtitle.empty? %>
+        <h1 class="nobootstrap">
+          <%= link_to image_tag("fairygirlhead.png", class: "rotate", size: "50x50") %> 
+          <%= @post.title %>
+        </h1>
+        <br><br>
+        <div class="Grid">
+          <div class="Grid--1ofX">
+            <%= image_tag @post.image.url(:xlarge), :class => "center-block" %> 
+          </div>
+        </div>      
+        <hr>
+        <div class="froala-view"><%= @post.body.html_safe %></div>
+        <h2 class="heart"><i class="fa fa-heart" aria-hidden="true"></i>,<h2> 
+        <h2 class="signature">monorails & mickey tales <%= link_to image_tag("fairygirlhead.png", class: "rotate", size: "50x50") %></h2>
+        <hr>
+
+        <div class="row">
+          <h3 class="postshow"><strong>Topics: </strong><%= render @post.tags %></h3>
+            <hr>
+            <div class="indent"><%= social_share_button_tag(@post.title) %> </div>
+            <hr>
+        </div>    
+
+        <a id='comments' href='#'><h2 class="posts"> Leave a comment<br></h2></a>
+        <%= render 'disqus' %>  
+
+      <% else %>
+
+<!-- End Blog post only -->
+
+        <div class="froala-view"><%= @post.body.html_safe %></div>
+        <h2 class="heart"><i class="fa fa-heart" aria-hidden="true"></i>,<h2> 
+        <h2 class="signature">monorails & mickey tales <%= link_to image_tag("fairygirlhead.png", class: "rotate", size: "50x50") %></h2>
+        <hr>  
+        <h2 class="posts"> What would your answer be?<br></h2>
+        <%= render 'disqus' %>  
+
+        <div class="row">
+          <h3 class="postshow"><strong>Topics: </strong><%= render @post.tags %></h3>
+            <hr>
+            <div class="indent"><%= social_share_button_tag(@post.title) %> </div>
+            <hr>
+        </div>
+
+      <% end%>
   
-
-    <div class="row">
-      <h3 class="postshow"><strong>Topics: </strong><%= render @post.tags %></h3>
-        <hr>
-        <div class="indent"><%= social_share_button_tag(@post.title) %> </div>
-        <hr>
-    </div>
-
-<!-- Comments -->  
-
-    <h2 class="posts"> What would your answer be?<br>Tell us in the comments!</h2>
-    <%= render 'disqus' %>  </div>
-    <span id="comments" class="anchor"></span>
-
 <!-- Recent posts -->
-    
     <%= render 'otherrecent' %>
+
     <hr>
     <div class="center"><%= link_to 'Back', posts_path, class: "btn btn-back btn-lg" %></div>
     <hr>
 
-
-    
 
   <!-- Code for related posts would go here -->
     
@@ -62,12 +75,6 @@
 
   </div>
 </div>
-
-
-
-
-
-
 
 
 

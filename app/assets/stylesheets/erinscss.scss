@@ -780,3 +780,9 @@ Bootstrap button overrides
  display: none;
 }
 
+#comments {
+  top: 90px;
+  z-index: 10001;
+  cursor: default;
+}
+

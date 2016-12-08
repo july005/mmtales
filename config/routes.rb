@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'posts/all', to: "posts#all"
 
   devise_for :users
-  resources :posts
+  resources :posts 
   root to: 'posts#index'
   resources :tags, only: [:index, :show]
   resources :contacts, only: [:new, :create]
