@@ -38,13 +38,13 @@ class PostsController < ApplicationController
                   twitter: {
                     card: "summary",
                     site: "@disneywiz",
-                    title: "monorails & mickey tales",
-                    description: @post.title,
+                    title: @post.title,
+                    description: "monorails & mickey tales",
                     image: "http://www.monorailsandmickeytales.com/assets/fairygirledit-b983cb64901e1aa7909e6c766dc442abcbc2061718cddba19ecbc5f76e42731f.png"
                   },
                   og: {
-                    title:  "monorails & mickey tales",
-                    description: @post.title,
+                    title:  @post.title,
+                    description: "monorails & mickey tales",
                     type: 'website',
                     url: post_url(@post),
                     image: "http://www.monorailsandmickeytales.com/assets/fairygirledit-b983cb64901e1aa7909e6c766dc442abcbc2061718cddba19ecbc5f76e42731f.png"
